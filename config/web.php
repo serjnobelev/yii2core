@@ -68,6 +68,16 @@ $config = [
             ]
         ],
 
+        'i18n' => [
+            'translations' => [
+                'app' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@app/i18n',
+                    'sourceLanguage' => 'ru',
+                ],
+            ]
+        ],
+
         /*'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,

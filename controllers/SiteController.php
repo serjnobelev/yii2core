@@ -134,11 +134,9 @@ class SiteController extends Controller
      */
     public function actionAbout()
     {
+        $confPath = Yii::getAlias('@app') . '/translations/' . Yii::$app->language . '/interface.php';
+        $t = require $confPath;
         $art = new Article();
-        
-        var_dump($art->config);
-        echo(Yii::getAlias('@adm'));
-        echo '<br />';
 
         $count = Article::findOne(1);
 
@@ -152,12 +150,14 @@ class SiteController extends Controller
             ->bindValue(':id', '3')
             ->queryOne();*/
 
-        echo '<pre>';
-        echo '<h2>Данный язык: ' . Yii::$app->language . '</h2>';
+//        echo '<pre>';
+//        var_dump($t); die;
+        
+        /*echo '<h2>Данный язык: ' . Yii::$app->language . '</h2>';
         echo '<br />';
         echo '<h3><a href="' . Url::to(['site/about', 'language' => 'ru']) . '">Русский</a>';
         echo '<br />';
-        echo '<h3><a href="' . Url::to(['site/about', 'language' => 'en']) . '">English</a>';
+        echo '<h3><a href="' . Url::to(['site/about', 'language' => 'en']) . '">English</a>';*/
 
         //Event create
 //        $art->on(Article::ARTICLE_CREATED, function($event){
@@ -166,8 +166,7 @@ class SiteController extends Controller
 
         //Event start
         //$art->trigger(Article::ARTICLE_CREATED);
-        die;
-//        return $this->render('about');
+        return $this->render('about', ['t' => $t]);
     }
     public function actionError()
     {
