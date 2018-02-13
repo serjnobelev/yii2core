@@ -1,0 +1,152 @@
+2018/02/04 12:07:37 [error] 1940#0: *1 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 127.0.0.1, server: localhost, request: "GET /index.php HTTP/1.1", host: "localhost"
+2018/02/04 12:07:37 [error] 1941#0: *2 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/index.php"
+2018/02/04 12:07:48 [error] 1959#0: *1 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 127.0.0.1, server: localhost, request: "GET /index.php HTTP/1.1", host: "localhost"
+2018/02/04 12:07:48 [error] 1960#0: *2 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/index.php"
+2018/02/04 12:07:49 [error] 1959#0: *3 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 127.0.0.1, server: localhost, request: "GET /index.php HTTP/1.1", host: "localhost"
+2018/02/04 12:07:49 [error] 1960#0: *4 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/index.php"
+2018/02/04 12:07:49 [error] 1960#0: *5 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 127.0.0.1, server: localhost, request: "GET /index.php HTTP/1.1", host: "localhost"
+2018/02/04 12:07:50 [error] 1960#0: *6 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/index.php"
+2018/02/04 12:07:52 [error] 1957#0: *7 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2018/02/04 12:07:52 [error] 1960#0: *8 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2018/02/04 12:07:53 [error] 1960#0: *9 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2018/02/04 12:07:53 [error] 1960#0: *10 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2018/02/04 12:07:53 [error] 1960#0: *11 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2018/02/04 12:07:53 [error] 1960#0: *12 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2018/02/04 12:07:54 [error] 1960#0: *13 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2018/02/04 12:07:54 [error] 1960#0: *14 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2018/02/04 12:08:20 [error] 1959#0: *15 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2018/02/04 12:08:21 [error] 1960#0: *16 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2018/02/04 12:08:21 [error] 1960#0: *17 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2018/02/04 12:08:21 [error] 1960#0: *18 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2018/02/04 12:08:21 [error] 1960#0: *19 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2018/02/04 12:08:21 [error] 1960#0: *20 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2018/02/04 12:08:22 [error] 1960#0: *21 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2018/02/04 12:08:22 [error] 1960#0: *22 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2018/02/04 12:08:22 [error] 1960#0: *23 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2018/02/04 12:08:22 [error] 1960#0: *24 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2018/02/04 12:08:22 [error] 1960#0: *25 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2018/02/04 12:08:22 [error] 1960#0: *26 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2018/02/04 12:08:22 [error] 1960#0: *27 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2018/02/04 12:08:22 [error] 1960#0: *28 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2018/02/04 12:08:22 [error] 1959#0: *29 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2018/02/04 12:08:22 [error] 1960#0: *30 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2018/02/04 12:08:22 [error] 1960#0: *31 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2018/02/04 12:08:23 [error] 1960#0: *32 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2018/02/04 12:08:23 [error] 1960#0: *33 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2018/02/04 12:08:23 [error] 1960#0: *34 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2018/02/04 12:08:23 [error] 1960#0: *35 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2018/02/04 12:08:23 [error] 1960#0: *36 rewrite or internal redirection cycle while internally redirecting to "/index.php", client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost", referrer: "http://localhost/"
+2018/02/04 12:08:46 [error] 1986#0: *1 FastCGI sent in stderr: "PHP message: PHP Notice:  Trying to get property of non-object in /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/log/Dispatcher.php on line 187" while reading upstream, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost"
+2018/02/04 12:08:46 [error] 1986#0: *1 FastCGI sent in stderr: "PHP message: PHP Notice:  Trying to get property of non-object in /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/log/Dispatcher.php on line 187" while reading upstream, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost"
+2018/02/04 12:08:46 [error] 1986#0: *1 FastCGI sent in stderr: "PHP message: PHP Notice:  Trying to get property of non-object in /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/log/Dispatcher.php on line 187" while reading upstream, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost"
+2018/02/04 12:09:11 [error] 1986#0: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  mkdir(): Permission denied in /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/helpers/BaseFileHelper.php on line 501" while reading upstream, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost"
+2018/02/04 12:09:11 [error] 1986#0: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  file_put_contents(/Volumes/macStorage/webserver/yii2/runtime/debug/5a76dbc78fefc.data): failed to open stream: No such file or directory in /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2-debug/LogTarget.php on line 64" while reading upstream, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost"
+2018/02/04 12:09:11 [error] 1986#0: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  touch(): Unable to create file /Volumes/macStorage/webserver/yii2/runtime/debug/index.data because No such file or directory in /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2-debug/LogTarget.php on line 82" while reading upstream, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost"
+2018/02/04 12:09:25 [error] 1986#0: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  mkdir(): Permission denied in /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/helpers/BaseFileHelper.php on line 501" while reading upstream, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost"
+2018/02/04 12:09:25 [error] 1986#0: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  file_put_contents(/Volumes/macStorage/webserver/yii2/runtime/debug/5a76dbd5414f1.data): failed to open stream: No such file or directory in /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2-debug/LogTarget.php on line 64" while reading upstream, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost"
+2018/02/04 12:09:25 [error] 1986#0: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  touch(): Unable to create file /Volumes/macStorage/webserver/yii2/runtime/debug/index.data because No such file or directory in /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2-debug/LogTarget.php on line 82" while reading upstream, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost"
+2018/02/04 12:09:26 [error] 1986#0: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  mkdir(): Permission denied in /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/helpers/BaseFileHelper.php on line 501" while reading upstream, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost"
+2018/02/04 12:09:26 [error] 1986#0: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  file_put_contents(/Volumes/macStorage/webserver/yii2/runtime/debug/5a76dbd61f7fd.data): failed to open stream: No such file or directory in /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2-debug/LogTarget.php on line 64" while reading upstream, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost"
+2018/02/04 12:09:26 [error] 1986#0: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  touch(): Unable to create file /Volumes/macStorage/webserver/yii2/runtime/debug/index.data because No such file or directory in /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2-debug/LogTarget.php on line 82" while reading upstream, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost"
+2018/02/04 12:09:26 [error] 1986#0: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  mkdir(): Permission denied in /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/helpers/BaseFileHelper.php on line 501" while reading upstream, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost"
+2018/02/04 12:09:26 [error] 1986#0: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  file_put_contents(/Volumes/macStorage/webserver/yii2/runtime/debug/5a76dbd6d52d2.data): failed to open stream: No such file or directory in /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2-debug/LogTarget.php on line 64" while reading upstream, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost"
+2018/02/04 12:09:26 [error] 1986#0: *1 FastCGI sent in stderr: "PHP message: PHP Warning:  touch(): Unable to create file /Volumes/macStorage/webserver/yii2/runtime/debug/index.data because No such file or directory in /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2-debug/LogTarget.php on line 82" while reading upstream, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost"
+2018/02/04 22:23:41 [error] 1985#0: *740 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught yii\base\ErrorException: Object of class app\models\Category could not be converted to string in /Volumes/macStorage/webserver/yii2/modules/admin/controllers/ArticleController.php:141
+Stack trace:
+#0 /Volumes/macStorage/webserver/yii2/modules/admin/controllers/ArticleController.php(141): yii\base\ErrorHandler->handleError(4096, 'Object of class...', '/Volumes/macSto...', 141, Array)
+#1 [internal function]: app\modules\admin\controllers\ArticleController->actionSetCategory('3')
+#2 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('set-category', Array)
+#5 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('admi" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /admin/article/set-category?id=3 HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost", referrer: "http://localhost/admin/article/view?id=3"
+2018/02/11 11:22:44 [error] 7153#0: *11 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\UnknownPropertyException: Getting unknown property: app\mo" while reading upstream, client: 127.0.0.1, server: localhost, request: "GET /auth/logout HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost"
+2018/02/11 11:22:44 [error] 7153#0: *11 FastCGI sent in stderr: "dels\User::username in /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Component.php:148
+Stack trace:
+#0 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/db/BaseActiveRecord.php(288): yii\base\Component->__get('username')
+#1 /Volumes/macStorage/webserver/yii2/views/layouts/main.php(50): yii\db\BaseActiveRecord->__get('username')
+#2 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/View.php(332): require('/Volumes/macSto...')
+#3 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/Volumes/macSto...', Array)
+#4 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Controller.php(399): yii\base\View->renderFile('/Volumes/macSto...', Array, Object(app\controllers\SiteController))
+#5 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Controller.php(385): yii\base\Controller->renderContent('" while reading upstream, client: 127.0.0.1, server: localhost, request: "GET /auth/logout HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost"
+2018/02/11 11:28:11 [error] 7220#0: *1 FastCGI sent in stderr: "PHP message: An Error occurred while handling another error:
+yii\base\UnknownPropertyException: Getting unknown property: app\models\User::username in /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Component.php:148
+Stack trace:
+#0 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/db/BaseActiveRecord.php(288): yii\base\Component->__get('username')
+#1 /Volumes/macStorage/webserver/yii2/views/layouts/main.php(50): yii\db\BaseActiveRecord->__get('username')
+#2 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/View.php(332): require('/Volumes/macSto...')
+#3 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yi" while reading upstream, client: 127.0.0.1, server: localhost, request: "GET /logout HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost"
+2018/02/11 11:28:11 [error] 7220#0: *1 FastCGI sent in stderr: "i2/base/View.php(250): yii\base\View->renderPhpFile('/Volumes/macSto...', Array)
+#4 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Controller.php(399): yii\base\View->renderFile('/Volumes/macSto...', Array, Object(app\controllers\SiteController))
+#5 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Controller.php(385): yii\base\Controller->renderContent('" while reading upstream, client: 127.0.0.1, server: localhost, request: "GET /logout HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost"
+2018/02/11 12:56:30 [error] 8298#0: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Cannot redeclare app\models\SignupForm::$password in /Volumes/macStorage/webserver/yii2/models/SignupForm.php on line 19" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /auth/signup HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost"
+2018/02/11 12:56:33 [error] 8298#0: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Cannot redeclare app\models\SignupForm::$password in /Volumes/macStorage/webserver/yii2/models/SignupForm.php on line 19" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /auth/signup HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost"
+2018/02/11 21:39:26 [error] 2985#0: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Class 'Yii' not found in /Volumes/macStorage/webserver/yii2/web/index.php:2
+Stack trace:
+#0 {main}
+  thrown in /Volumes/macStorage/webserver/yii2/web/index.php on line 2" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /site/about HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost"
+2018/02/11 21:39:31 [error] 2985#0: *1 FastCGI sent in stderr: "PHP message: PHP Notice:  Trying to get property of non-object in /Volumes/macStorage/webserver/yii2/web/index.php on line 11
+PHP message: PHP Fatal error:  Uncaught Error: Call to a member function setStatusCode() on null in /Volumes/macStorage/webserver/yii2/web/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /Volumes/macStorage/webserver/yii2/web/index.php on line 11" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /site/about HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost"
+2018/02/11 21:39:31 [error] 2985#0: *1 FastCGI sent in stderr: "PHP message: PHP Notice:  Trying to get property of non-object in /Volumes/macStorage/webserver/yii2/web/index.php on line 11
+PHP message: PHP Fatal error:  Uncaught Error: Call to a member function setStatusCode() on null in /Volumes/macStorage/webserver/yii2/web/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /Volumes/macStorage/webserver/yii2/web/index.php on line 11" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /site/about HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost"
+2018/02/11 21:39:32 [error] 2985#0: *1 FastCGI sent in stderr: "PHP message: PHP Notice:  Trying to get property of non-object in /Volumes/macStorage/webserver/yii2/web/index.php on line 11
+PHP message: PHP Fatal error:  Uncaught Error: Call to a member function setStatusCode() on null in /Volumes/macStorage/webserver/yii2/web/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /Volumes/macStorage/webserver/yii2/web/index.php on line 11" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /site/about HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost"
+2018/02/11 21:39:32 [error] 2985#0: *1 FastCGI sent in stderr: "PHP message: PHP Notice:  Trying to get property of non-object in /Volumes/macStorage/webserver/yii2/web/index.php on line 11
+PHP message: PHP Fatal error:  Uncaught Error: Call to a member function setStatusCode() on null in /Volumes/macStorage/webserver/yii2/web/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /Volumes/macStorage/webserver/yii2/web/index.php on line 11" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /site/about HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost"
+2018/02/11 21:39:32 [error] 2985#0: *1 FastCGI sent in stderr: "PHP message: PHP Notice:  Trying to get property of non-object in /Volumes/macStorage/webserver/yii2/web/index.php on line 11
+PHP message: PHP Fatal error:  Uncaught Error: Call to a member function setStatusCode() on null in /Volumes/macStorage/webserver/yii2/web/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /Volumes/macStorage/webserver/yii2/web/index.php on line 11" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /site/about HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost"
+2018/02/11 21:39:33 [error] 2985#0: *1 FastCGI sent in stderr: "PHP message: PHP Notice:  Trying to get property of non-object in /Volumes/macStorage/webserver/yii2/web/index.php on line 11
+PHP message: PHP Fatal error:  Uncaught Error: Call to a member function setStatusCode() on null in /Volumes/macStorage/webserver/yii2/web/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /Volumes/macStorage/webserver/yii2/web/index.php on line 11" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /site/about HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost"
+2018/02/11 21:39:33 [error] 2985#0: *1 FastCGI sent in stderr: "PHP message: PHP Notice:  Trying to get property of non-object in /Volumes/macStorage/webserver/yii2/web/index.php on line 11
+PHP message: PHP Fatal error:  Uncaught Error: Call to a member function setStatusCode() on null in /Volumes/macStorage/webserver/yii2/web/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /Volumes/macStorage/webserver/yii2/web/index.php on line 11" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /site/about HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost"
+2018/02/11 21:39:33 [error] 2985#0: *1 FastCGI sent in stderr: "PHP message: PHP Notice:  Trying to get property of non-object in /Volumes/macStorage/webserver/yii2/web/index.php on line 11
+PHP message: PHP Fatal error:  Uncaught Error: Call to a member function setStatusCode() on null in /Volumes/macStorage/webserver/yii2/web/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /Volumes/macStorage/webserver/yii2/web/index.php on line 11" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /site/about HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost"
+2018/02/11 21:59:00 [error] 3215#0: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Class 'UrlNormalizer' not found in /Volumes/macStorage/webserver/yii2/config/web.php:56
+Stack trace:
+#0 /Volumes/macStorage/webserver/yii2/web/index.php(11): require()
+#1 {main}
+  thrown in /Volumes/macStorage/webserver/yii2/config/web.php on line 56" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /site HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost"
+2018/02/11 21:59:01 [error] 3215#0: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Class 'UrlNormalizer' not found in /Volumes/macStorage/webserver/yii2/config/web.php:56
+Stack trace:
+#0 /Volumes/macStorage/webserver/yii2/web/index.php(11): require()
+#1 {main}
+  thrown in /Volumes/macStorage/webserver/yii2/config/web.php on line 56" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /site HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost"
+2018/02/11 21:59:02 [error] 3215#0: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Class 'UrlNormalizer' not found in /Volumes/macStorage/webserver/yii2/config/web.php:56
+Stack trace:
+#0 /Volumes/macStorage/webserver/yii2/web/index.php(11): require()
+#1 {main}
+  thrown in /Volumes/macStorage/webserver/yii2/config/web.php on line 56" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /site/about HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost"
+2018/02/11 21:59:06 [error] 3215#0: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Class 'UrlNormalizer' not found in /Volumes/macStorage/webserver/yii2/config/web.php:56
+Stack trace:
+#0 /Volumes/macStorage/webserver/yii2/web/index.php(11): require()
+#1 {main}
+  thrown in /Volumes/macStorage/webserver/yii2/config/web.php on line 56" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /site/index/ HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost"
+2018/02/11 21:59:25 [error] 3220#0: *1 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Class 'UrlNormalizer' not found in /Volumes/macStorage/webserver/yii2/config/web.php:56
+Stack trace:
+#0 /Volumes/macStorage/webserver/yii2/web/index.php(11): require()
+#1 {main}
+  thrown in /Volumes/macStorage/webserver/yii2/config/web.php on line 56" while reading response header from upstream, client: 127.0.0.1, server: localhost, request: "GET /site/index/ HTTP/1.1", upstream: "fastcgi://127.0.0.1:9000", host: "localhost"
