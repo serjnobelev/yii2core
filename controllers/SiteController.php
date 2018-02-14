@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use app\components\Foo;
+use app\models\Category;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -136,22 +137,41 @@ class SiteController extends Controller
     {
         $confPath = Yii::getAlias('@app') . '/translations/' . Yii::$app->language . '/interface.php';
         $t = require $confPath;
-        $art = new Article();
 
-        $count = Article::findOne(1);
+        //$count = Article::find()->with('category')->all();
+        
+        //$count = Article::find()->joinWith('category cc')->where(['cc.id' => '1'])->all();
+
+        $a = Article::findOne(1);
+        $c = new Category();
+        $c->title = 'Технологии';
+        $c->save();
+
+        //commit evening
+
+        $c->link('articles', $a);
+        echo '<pre>';
+        var_dump($a->category->title);
+        die;
+
+        echo '<pre>';
+        var_dump($count);
+        die;
 
 
-        /*$count = (new \yii\db\Query())
-            ->select('*')
-            ->from('article')
-            ->where('id=:id', [':id' => '3'])->one();*/
+//        $count = (new \yii\db\Query())
+//            ->select('*')
+//            ->from('article')
+//            ->where('id=:id', [':id' => '1'])->limit(1)->one();
 
-        /*$count = Yii::$app->db->createCommand('SELECT * FROM article WHERE id=:id')
-            ->bindValue(':id', '3')
-            ->queryOne();*/
+//        $count = Yii::$app->db->createCommand('SELECT title_' . Yii::$app->language . ' AS title FROM article WHERE id=:id')
+//        ->bindValue(':id', '1')
+//        ->queryOne();
 
-//        echo '<pre>';
-//        var_dump($t); die;
+        //$tags = $count->getTags()->orderBy('title')->all();
+
+        //$category = $count->category;
+
         
         /*echo '<h2>Данный язык: ' . Yii::$app->language . '</h2>';
         echo '<br />';
