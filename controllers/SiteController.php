@@ -6,12 +6,14 @@ use app\components\Foo;
 use app\models\Category;
 use Yii;
 use yii\filters\AccessControl;
+use yii\validators\EmailValidator;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\UserForm;
 use app\models\Article;
 use yii\helpers\Url;
 
@@ -87,6 +89,35 @@ class SiteController extends Controller
         return $this->render('login', [
             'model' => $model,
         ]);
+    }
+
+    public function actionUser()
+    {
+        $email = 's.nobelev@gmail.com';
+        $v = new EmailValidator();
+
+        if($v->validate($email, $er)) {
+            echo $email;
+        } else {
+            echo $er;
+        }
+
+        die;
+
+        $model = new UserForm();
+
+        if(Yii::$app->request->isPost)
+        {
+            if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+                echo '<pre>';
+                var_dump($model->attributes);
+                die;
+            }
+        } else {
+            return $this->render('user', [
+                'model' => $model,
+            ]);
+        }
     }
 
     /**
