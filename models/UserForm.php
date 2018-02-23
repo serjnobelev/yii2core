@@ -35,6 +35,7 @@ class UserForm extends Model
             [['about'], 'default', 'value' => 'Пусто'],
             // rememberMe must be a boolean value
             ['isAdmin', 'boolean'],
+            ['photo', 'image'],
             // password is validated by validatePassword()
             ['password', 'validatePassword'],
         ];

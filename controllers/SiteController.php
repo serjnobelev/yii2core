@@ -93,16 +93,8 @@ class SiteController extends Controller
 
     public function actionUser()
     {
-        $email = 's.nobelev@gmail.com';
+        $email = 's.nobel1evgmail.com';
         $v = new EmailValidator();
-
-        if($v->validate($email, $er)) {
-            echo $email;
-        } else {
-            echo $er;
-        }
-
-        die;
 
         $model = new UserForm();
 
