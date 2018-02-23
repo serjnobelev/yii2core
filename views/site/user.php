@@ -21,9 +21,9 @@ $this->params['breadcrumbs'][] = $this->title;
 
                     <?= $form->field($model, 'name')->textInput(['autofocus' => true]); ?>
 
-                    <?= $form->field($model, 'email')->textInput(['value' => 'your@email']); ?>
+                    <?= $form->field($model, 'email')->textInput(['placeholder' => 'your@email.com']); ?>
 
-                    <?= $form->field($model, 'about')->textarea(); ?>
+                    <?= $form->field($model, 'about')->textarea()->hint('Данные о себе'); ?>
 
                     <?= $form->field($model, 'password'); ?>
 
