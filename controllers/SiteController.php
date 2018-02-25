@@ -165,22 +165,22 @@ class SiteController extends Controller
         
         //$count = Article::find()->joinWith('category cc')->where(['cc.id' => '1'])->all();
 
-        $a = Article::findOne(1);
-        $c = new Category();
-        $c->title = 'Технологии';
-        $c->save();
+//        $a = Article::findOne(1);
+//        $c = new Category();
+//        $c->title = 'Технологии';
+//        $c->save();
 
         //commit evening
 
-        $c->link('articles', $a);
-        echo '<pre>';
-        var_dump($a->category->title);
-        die;
+//        $c->link('articles', $a);
+//        echo '<pre>';
+//        var_dump($a->category->title);
+//        die;
 
-        echo '<pre>';
-        var_dump($count);
-        die;
+        //echo '<pre>';
 
+        //echo(Yii::$app->formatter->asDate('2014-01-01', 'long'));
+        //echo '<br />';
 
 //        $count = (new \yii\db\Query())
 //            ->select('*')
@@ -209,7 +209,14 @@ class SiteController extends Controller
 
         //Event start
         //$art->trigger(Article::ARTICLE_CREATED);
-        return $this->render('about', ['t' => $t]);
+
+        $count =
+          [
+              'title' => 'Заголовок 1',
+              'description' => 'Описание 1'
+          ]
+        ;
+        return $this->render('about', ['count' => $count]);
     }
     public function actionError()
     {

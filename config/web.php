@@ -75,6 +75,11 @@ $config = [
                     'basePath' => '@app/i18n',
                     'sourceLanguage' => 'ru',
                 ],
+                'userformmsg' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@app/i18n',
+                    'sourceLanguage' => 'ru',
+                ],
             ]
         ],
 

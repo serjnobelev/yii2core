@@ -33,8 +33,8 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
     public function rules()
     {
         return [
+            [['email', 'password', 'photo'], 'string', 'max' => 255],
             [['isAdmin'], 'integer'],
-            [['name', 'email', 'password', 'photo'], 'string', 'max' => 255],
         ];
     }
 
@@ -78,12 +78,12 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
 
     public function getAuthKey()
     {
-        //return $this->authKey;
+        return $this->authKey;
     }
 
     public function validateAuthKey($authKey)
     {
-        //return $this->authKey === $authKey;
+        return $this->authKey === $authKey;
     }
 
     public static function findByEmail($email)

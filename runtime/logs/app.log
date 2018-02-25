@@ -22338,3 +22338,1781 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1519313078.5315
     'REQUEST_TIME' => 1519313078
 ]
+2018-02-24 11:54:58 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][error][yii\db\Exception] PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/db/Connection.php:660
+Stack trace:
+#0 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/db/Connection.php(660): PDO->__construct('mysql:host=loca...', 'root', '76sixers', NULL)
+#1 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/db/Connection.php(586): yii\db\Connection->createPdoInstance()
+#2 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/db/Connection.php(943): yii\db\Connection->open()
+#3 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/db/Connection.php(930): yii\db\Connection->getMasterPdo()
+#4 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/db/Command.php(243): yii\db\Connection->getSlavePdo()
+#5 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/db/Command.php(1062): yii\db\Command->prepare(true)
+#6 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/db/Command.php(386): yii\db\Command->queryInternal('fetchAll', NULL)
+#7 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/db/mysql/Schema.php(320): yii\db\Command->queryAll()
+#8 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/db/mysql/Schema.php(111): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#9 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/db/Schema.php(662): yii\db\mysql\Schema->loadTableSchema('article')
+#10 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/db/Schema.php(173): yii\db\Schema->getTableMetadata('article', 'schema', false)
+#11 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/db/ActiveRecord.php(346): yii\db\Schema->getTableSchema('article')
+#12 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/db/ActiveRecord.php(370): yii\db\ActiveRecord::getTableSchema()
+#13 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/db/ActiveRecord.php(177): yii\db\ActiveRecord::primaryKey()
+#14 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/db/BaseActiveRecord.php(107): yii\db\ActiveRecord::findByCondition(1)
+#15 /Volumes/macStorage/webserver/yii2/controllers/SiteController.php(168): yii\db\BaseActiveRecord::findOne(1)
+#16 [internal function]: app\controllers\SiteController->actionAbout()
+#17 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#18 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#19 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('about', Array)
+#20 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/about', Array)
+#21 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 /Volumes/macStorage/webserver/yii2/web/index.php(12): yii\base\Application->run()
+#23 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: YES) in /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/db/Connection.php:597
+Stack trace:
+#0 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/db/Connection.php(943): yii\db\Connection->open()
+#1 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/db/Connection.php(930): yii\db\Connection->getMasterPdo()
+#2 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/db/Command.php(243): yii\db\Connection->getSlavePdo()
+#3 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/db/Command.php(1062): yii\db\Command->prepare(true)
+#4 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/db/Command.php(386): yii\db\Command->queryInternal('fetchAll', NULL)
+#5 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/db/mysql/Schema.php(320): yii\db\Command->queryAll()
+#6 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/db/mysql/Schema.php(111): yii\db\mysql\Schema->findColumns(Object(yii\db\TableSchema))
+#7 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/db/Schema.php(662): yii\db\mysql\Schema->loadTableSchema('article')
+#8 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/db/Schema.php(173): yii\db\Schema->getTableMetadata('article', 'schema', false)
+#9 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/db/ActiveRecord.php(346): yii\db\Schema->getTableSchema('article')
+#10 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/db/ActiveRecord.php(370): yii\db\ActiveRecord::getTableSchema()
+#11 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/db/ActiveRecord.php(177): yii\db\ActiveRecord::primaryKey()
+#12 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/db/BaseActiveRecord.php(107): yii\db\ActiveRecord::findByCondition(1)
+#13 /Volumes/macStorage/webserver/yii2/controllers/SiteController.php(168): yii\db\BaseActiveRecord::findOne(1)
+#14 [internal function]: app\controllers\SiteController->actionAbout()
+#15 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#16 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#17 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('about', Array)
+#18 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/about', Array)
+#19 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 /Volumes/macStorage/webserver/yii2/web/index.php(12): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2018-02-24 11:54:58 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.827355828.1515842508'
+    'language' => '3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a:2:{i:0;s:8:\"language\";i:1;s:5:\"zh-CN\";}'
+    '_csrf' => '57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT\";}'
+    'lang' => '7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a:2:{i:0;s:4:\"lang\";i:1;s:2:\"ru\";}'
+    'PHPSESSID' => 'rln3olntrand3uoftgjudsh6r3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'qesegi'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => '_www'
+    'HOME' => '/Library/WebServer'
+    'HTTP_COOKIE' => '_ga=GA1.1.827355828.1515842508; language=3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A5%3A%22zh-CN%22%3B%7D; _csrf=57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT%22%3B%7D; lang=7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a%3A2%3A%7Bi%3A0%3Bs%3A4%3A%22lang%22%3Bi%3A1%3Bs%3A2%3A%22ru%22%3B%7D; PHPSESSID=rln3olntrand3uoftgjudsh6r3'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en-US;q=0.9,en;q=0.8,uk;q=0.7,de;q=0.6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://localhost/site/contact/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'localhost'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '52608'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.13.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Volumes/macStorage/webserver/yii2/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/site/about/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'SCRIPT_FILENAME' => '/Volumes/macStorage/webserver/yii2/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519473298.9634
+    'REQUEST_TIME' => 1519473298
+]
+2018-02-24 12:07:00 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: Invalid validation rule: a rule must specify both attribute names and validator type. in /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Model.php:454
+Stack trace:
+#0 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Model.php(413): yii\base\Model->createValidators()
+#1 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Model.php(429): yii\base\Model->getValidators()
+#2 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Model.php(477): yii\base\Model->getActiveValidators('name')
+#3 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/widgets/ActiveField.php(859): yii\base\Model->isAttributeRequired('name')
+#4 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/widgets/ActiveField.php(393): yii\widgets\ActiveField->addAriaAttributes('<span class="st...')
+#5 /Volumes/macStorage/webserver/yii2/views/site/user.php(22): yii\widgets\ActiveField->textInput('<span class="st...')
+#6 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/View.php(332): require('/Volumes/macSto...')
+#7 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/Volumes/macSto...', Array)
+#8 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/Volumes/macSto...', Array, Object(app\controllers\SiteController))
+#9 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('user', Array, Object(app\controllers\SiteController))
+#10 /Volumes/macStorage/webserver/yii2/controllers/SiteController.php(110): yii\base\Controller->render('user', Array)
+#11 [internal function]: app\controllers\SiteController->actionUser()
+#12 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#13 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#14 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('user', Array)
+#15 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/user', Array)
+#16 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 /Volumes/macStorage/webserver/yii2/web/index.php(12): yii\base\Application->run()
+#18 {main}
+2018-02-24 12:07:00 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.827355828.1515842508'
+    'language' => '3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a:2:{i:0;s:8:\"language\";i:1;s:5:\"zh-CN\";}'
+    '_csrf' => '57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT\";}'
+    'lang' => '7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a:2:{i:0;s:4:\"lang\";i:1;s:2:\"ru\";}'
+    'PHPSESSID' => 'rln3olntrand3uoftgjudsh6r3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'qesegi'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => '_www'
+    'HOME' => '/Library/WebServer'
+    'HTTP_COOKIE' => '_ga=GA1.1.827355828.1515842508; language=3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A5%3A%22zh-CN%22%3B%7D; _csrf=57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT%22%3B%7D; lang=7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a%3A2%3A%7Bi%3A0%3Bs%3A4%3A%22lang%22%3Bi%3A1%3Bs%3A2%3A%22ru%22%3B%7D; PHPSESSID=rln3olntrand3uoftgjudsh6r3'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en-US;q=0.9,en;q=0.8,uk;q=0.7,de;q=0.6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://localhost/site/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'localhost'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '52824'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.13.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Volumes/macStorage/webserver/yii2/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/site/user/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'SCRIPT_FILENAME' => '/Volumes/macStorage/webserver/yii2/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519474020.1434
+    'REQUEST_TIME' => 1519474020
+]
+2018-02-24 12:07:01 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: Invalid validation rule: a rule must specify both attribute names and validator type. in /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Model.php:454
+Stack trace:
+#0 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Model.php(413): yii\base\Model->createValidators()
+#1 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Model.php(429): yii\base\Model->getValidators()
+#2 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Model.php(477): yii\base\Model->getActiveValidators('name')
+#3 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/widgets/ActiveField.php(859): yii\base\Model->isAttributeRequired('name')
+#4 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/widgets/ActiveField.php(393): yii\widgets\ActiveField->addAriaAttributes('<span class="st...')
+#5 /Volumes/macStorage/webserver/yii2/views/site/user.php(22): yii\widgets\ActiveField->textInput('<span class="st...')
+#6 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/View.php(332): require('/Volumes/macSto...')
+#7 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/Volumes/macSto...', Array)
+#8 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/Volumes/macSto...', Array, Object(app\controllers\SiteController))
+#9 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('user', Array, Object(app\controllers\SiteController))
+#10 /Volumes/macStorage/webserver/yii2/controllers/SiteController.php(110): yii\base\Controller->render('user', Array)
+#11 [internal function]: app\controllers\SiteController->actionUser()
+#12 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#13 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#14 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('user', Array)
+#15 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/user', Array)
+#16 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#17 /Volumes/macStorage/webserver/yii2/web/index.php(12): yii\base\Application->run()
+#18 {main}
+2018-02-24 12:07:01 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.827355828.1515842508'
+    'language' => '3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a:2:{i:0;s:8:\"language\";i:1;s:5:\"zh-CN\";}'
+    '_csrf' => '57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT\";}'
+    'lang' => '7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a:2:{i:0;s:4:\"lang\";i:1;s:2:\"ru\";}'
+    'PHPSESSID' => 'rln3olntrand3uoftgjudsh6r3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'qesegi'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => '_www'
+    'HOME' => '/Library/WebServer'
+    'HTTP_COOKIE' => '_ga=GA1.1.827355828.1515842508; language=3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A5%3A%22zh-CN%22%3B%7D; _csrf=57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT%22%3B%7D; lang=7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a%3A2%3A%7Bi%3A0%3Bs%3A4%3A%22lang%22%3Bi%3A1%3Bs%3A2%3A%22ru%22%3B%7D; PHPSESSID=rln3olntrand3uoftgjudsh6r3'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en-US;q=0.9,en;q=0.8,uk;q=0.7,de;q=0.6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://localhost/site/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'localhost'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '52824'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.13.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Volumes/macStorage/webserver/yii2/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/site/user/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'SCRIPT_FILENAME' => '/Volumes/macStorage/webserver/yii2/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519474021.1734
+    'REQUEST_TIME' => 1519474021
+]
+2018-02-24 12:13:31 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: Unable to locate message source for category 'formMsg'. in /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/i18n/I18N.php:201
+Stack trace:
+#0 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/i18n/I18N.php(89): yii\i18n\I18N->getMessageSource('formMsg')
+#1 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/BaseYii.php(512): yii\i18n\I18N->translate('formMsg', '\xD0\x9F\xD0\xBE\xD0\xBB\xD0\xB5 \xD0\xB8\xD0\xBC\xD1\x8F...', Array, 'ru')
+#2 /Volumes/macStorage/webserver/yii2/models/UserForm.php(34): yii\BaseYii::t('formMsg', '\xD0\x9F\xD0\xBE\xD0\xBB\xD0\xB5 \xD0\xB8\xD0\xBC\xD1\x8F...')
+#3 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Model.php(447): app\models\UserForm->rules()
+#4 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Model.php(413): yii\base\Model->createValidators()
+#5 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Model.php(429): yii\base\Model->getValidators()
+#6 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Model.php(477): yii\base\Model->getActiveValidators('name')
+#7 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/widgets/ActiveField.php(859): yii\base\Model->isAttributeRequired('name')
+#8 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/widgets/ActiveField.php(393): yii\widgets\ActiveField->addAriaAttributes('<span class="st...')
+#9 /Volumes/macStorage/webserver/yii2/views/site/user.php(22): yii\widgets\ActiveField->textInput('<span class="st...')
+#10 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/View.php(332): require('/Volumes/macSto...')
+#11 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/Volumes/macSto...', Array)
+#12 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/Volumes/macSto...', Array, Object(app\controllers\SiteController))
+#13 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('user', Array, Object(app\controllers\SiteController))
+#14 /Volumes/macStorage/webserver/yii2/controllers/SiteController.php(110): yii\base\Controller->render('user', Array)
+#15 [internal function]: app\controllers\SiteController->actionUser()
+#16 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#17 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#18 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('user', Array)
+#19 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/user', Array)
+#20 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#21 /Volumes/macStorage/webserver/yii2/web/index.php(12): yii\base\Application->run()
+#22 {main}
+2018-02-24 12:13:31 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.827355828.1515842508'
+    'language' => '3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a:2:{i:0;s:8:\"language\";i:1;s:5:\"zh-CN\";}'
+    '_csrf' => '57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT\";}'
+    'lang' => '7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a:2:{i:0;s:4:\"lang\";i:1;s:2:\"ru\";}'
+    'PHPSESSID' => 'rln3olntrand3uoftgjudsh6r3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'qesegi'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => '_www'
+    'HOME' => '/Library/WebServer'
+    'HTTP_COOKIE' => '_ga=GA1.1.827355828.1515842508; language=3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A5%3A%22zh-CN%22%3B%7D; _csrf=57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT%22%3B%7D; lang=7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a%3A2%3A%7Bi%3A0%3Bs%3A4%3A%22lang%22%3Bi%3A1%3Bs%3A2%3A%22ru%22%3B%7D; PHPSESSID=rln3olntrand3uoftgjudsh6r3'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en-US;q=0.9,en;q=0.8,uk;q=0.7,de;q=0.6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://localhost/site/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'localhost'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '52880'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.13.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Volumes/macStorage/webserver/yii2/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/site/user/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'SCRIPT_FILENAME' => '/Volumes/macStorage/webserver/yii2/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519474411.227
+    'REQUEST_TIME' => 1519474411
+]
+2018-02-24 12:13:32 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: Unable to locate message source for category 'formMsg'. in /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/i18n/I18N.php:201
+Stack trace:
+#0 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/i18n/I18N.php(89): yii\i18n\I18N->getMessageSource('formMsg')
+#1 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/BaseYii.php(512): yii\i18n\I18N->translate('formMsg', '\xD0\x9F\xD0\xBE\xD0\xBB\xD0\xB5 \xD0\xB8\xD0\xBC\xD1\x8F...', Array, 'ru')
+#2 /Volumes/macStorage/webserver/yii2/models/UserForm.php(34): yii\BaseYii::t('formMsg', '\xD0\x9F\xD0\xBE\xD0\xBB\xD0\xB5 \xD0\xB8\xD0\xBC\xD1\x8F...')
+#3 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Model.php(447): app\models\UserForm->rules()
+#4 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Model.php(413): yii\base\Model->createValidators()
+#5 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Model.php(429): yii\base\Model->getValidators()
+#6 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Model.php(477): yii\base\Model->getActiveValidators('name')
+#7 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/widgets/ActiveField.php(859): yii\base\Model->isAttributeRequired('name')
+#8 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/widgets/ActiveField.php(393): yii\widgets\ActiveField->addAriaAttributes('<span class="st...')
+#9 /Volumes/macStorage/webserver/yii2/views/site/user.php(22): yii\widgets\ActiveField->textInput('<span class="st...')
+#10 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/View.php(332): require('/Volumes/macSto...')
+#11 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/Volumes/macSto...', Array)
+#12 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/Volumes/macSto...', Array, Object(app\controllers\SiteController))
+#13 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('user', Array, Object(app\controllers\SiteController))
+#14 /Volumes/macStorage/webserver/yii2/controllers/SiteController.php(110): yii\base\Controller->render('user', Array)
+#15 [internal function]: app\controllers\SiteController->actionUser()
+#16 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#17 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#18 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('user', Array)
+#19 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/user', Array)
+#20 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#21 /Volumes/macStorage/webserver/yii2/web/index.php(12): yii\base\Application->run()
+#22 {main}
+2018-02-24 12:13:32 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.827355828.1515842508'
+    'language' => '3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a:2:{i:0;s:8:\"language\";i:1;s:5:\"zh-CN\";}'
+    '_csrf' => '57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT\";}'
+    'lang' => '7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a:2:{i:0;s:4:\"lang\";i:1;s:2:\"ru\";}'
+    'PHPSESSID' => 'rln3olntrand3uoftgjudsh6r3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'qesegi'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => '_www'
+    'HOME' => '/Library/WebServer'
+    'HTTP_COOKIE' => '_ga=GA1.1.827355828.1515842508; language=3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A5%3A%22zh-CN%22%3B%7D; _csrf=57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT%22%3B%7D; lang=7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a%3A2%3A%7Bi%3A0%3Bs%3A4%3A%22lang%22%3Bi%3A1%3Bs%3A2%3A%22ru%22%3B%7D; PHPSESSID=rln3olntrand3uoftgjudsh6r3'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en-US;q=0.9,en;q=0.8,uk;q=0.7,de;q=0.6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://localhost/site/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'localhost'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '52880'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.13.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Volumes/macStorage/webserver/yii2/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/site/user/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'SCRIPT_FILENAME' => '/Volumes/macStorage/webserver/yii2/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519474412.4751
+    'REQUEST_TIME' => 1519474412
+]
+2018-02-24 12:14:11 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: Unable to locate message source for category 'userformmsg'. in /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/i18n/I18N.php:201
+Stack trace:
+#0 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/i18n/I18N.php(89): yii\i18n\I18N->getMessageSource('userformmsg')
+#1 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/BaseYii.php(512): yii\i18n\I18N->translate('userformmsg', '\xD0\x9F\xD0\xBE\xD0\xBB\xD0\xB5 \xD0\xB8\xD0\xBC\xD1\x8F...', Array, 'ru')
+#2 /Volumes/macStorage/webserver/yii2/models/UserForm.php(34): yii\BaseYii::t('userformmsg', '\xD0\x9F\xD0\xBE\xD0\xBB\xD0\xB5 \xD0\xB8\xD0\xBC\xD1\x8F...')
+#3 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Model.php(447): app\models\UserForm->rules()
+#4 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Model.php(413): yii\base\Model->createValidators()
+#5 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Model.php(429): yii\base\Model->getValidators()
+#6 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Model.php(477): yii\base\Model->getActiveValidators('name')
+#7 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/widgets/ActiveField.php(859): yii\base\Model->isAttributeRequired('name')
+#8 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/widgets/ActiveField.php(393): yii\widgets\ActiveField->addAriaAttributes('<span class="st...')
+#9 /Volumes/macStorage/webserver/yii2/views/site/user.php(22): yii\widgets\ActiveField->textInput('<span class="st...')
+#10 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/View.php(332): require('/Volumes/macSto...')
+#11 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/Volumes/macSto...', Array)
+#12 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/Volumes/macSto...', Array, Object(app\controllers\SiteController))
+#13 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('user', Array, Object(app\controllers\SiteController))
+#14 /Volumes/macStorage/webserver/yii2/controllers/SiteController.php(110): yii\base\Controller->render('user', Array)
+#15 [internal function]: app\controllers\SiteController->actionUser()
+#16 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#17 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#18 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('user', Array)
+#19 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/user', Array)
+#20 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#21 /Volumes/macStorage/webserver/yii2/web/index.php(12): yii\base\Application->run()
+#22 {main}
+2018-02-24 12:14:11 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.827355828.1515842508'
+    'language' => '3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a:2:{i:0;s:8:\"language\";i:1;s:5:\"zh-CN\";}'
+    '_csrf' => '57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT\";}'
+    'lang' => '7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a:2:{i:0;s:4:\"lang\";i:1;s:2:\"ru\";}'
+    'PHPSESSID' => 'rln3olntrand3uoftgjudsh6r3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'qesegi'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => '_www'
+    'HOME' => '/Library/WebServer'
+    'HTTP_COOKIE' => '_ga=GA1.1.827355828.1515842508; language=3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A5%3A%22zh-CN%22%3B%7D; _csrf=57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT%22%3B%7D; lang=7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a%3A2%3A%7Bi%3A0%3Bs%3A4%3A%22lang%22%3Bi%3A1%3Bs%3A2%3A%22ru%22%3B%7D; PHPSESSID=rln3olntrand3uoftgjudsh6r3'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en-US;q=0.9,en;q=0.8,uk;q=0.7,de;q=0.6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://localhost/site/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'localhost'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '52888'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.13.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Volumes/macStorage/webserver/yii2/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/site/user/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'SCRIPT_FILENAME' => '/Volumes/macStorage/webserver/yii2/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519474451.8692
+    'REQUEST_TIME' => 1519474451
+]
+2018-02-24 12:14:12 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][error][yii\base\InvalidConfigException] yii\base\InvalidConfigException: Unable to locate message source for category 'userformmsg'. in /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/i18n/I18N.php:201
+Stack trace:
+#0 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/i18n/I18N.php(89): yii\i18n\I18N->getMessageSource('userformmsg')
+#1 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/BaseYii.php(512): yii\i18n\I18N->translate('userformmsg', '\xD0\x9F\xD0\xBE\xD0\xBB\xD0\xB5 \xD0\xB8\xD0\xBC\xD1\x8F...', Array, 'ru')
+#2 /Volumes/macStorage/webserver/yii2/models/UserForm.php(34): yii\BaseYii::t('userformmsg', '\xD0\x9F\xD0\xBE\xD0\xBB\xD0\xB5 \xD0\xB8\xD0\xBC\xD1\x8F...')
+#3 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Model.php(447): app\models\UserForm->rules()
+#4 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Model.php(413): yii\base\Model->createValidators()
+#5 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Model.php(429): yii\base\Model->getValidators()
+#6 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Model.php(477): yii\base\Model->getActiveValidators('name')
+#7 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/widgets/ActiveField.php(859): yii\base\Model->isAttributeRequired('name')
+#8 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/widgets/ActiveField.php(393): yii\widgets\ActiveField->addAriaAttributes('<span class="st...')
+#9 /Volumes/macStorage/webserver/yii2/views/site/user.php(22): yii\widgets\ActiveField->textInput('<span class="st...')
+#10 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/View.php(332): require('/Volumes/macSto...')
+#11 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/Volumes/macSto...', Array)
+#12 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/Volumes/macSto...', Array, Object(app\controllers\SiteController))
+#13 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('user', Array, Object(app\controllers\SiteController))
+#14 /Volumes/macStorage/webserver/yii2/controllers/SiteController.php(110): yii\base\Controller->render('user', Array)
+#15 [internal function]: app\controllers\SiteController->actionUser()
+#16 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#17 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#18 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('user', Array)
+#19 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/user', Array)
+#20 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#21 /Volumes/macStorage/webserver/yii2/web/index.php(12): yii\base\Application->run()
+#22 {main}
+2018-02-24 12:14:12 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.827355828.1515842508'
+    'language' => '3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a:2:{i:0;s:8:\"language\";i:1;s:5:\"zh-CN\";}'
+    '_csrf' => '57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT\";}'
+    'lang' => '7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a:2:{i:0;s:4:\"lang\";i:1;s:2:\"ru\";}'
+    'PHPSESSID' => 'rln3olntrand3uoftgjudsh6r3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'qesegi'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => '_www'
+    'HOME' => '/Library/WebServer'
+    'HTTP_COOKIE' => '_ga=GA1.1.827355828.1515842508; language=3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A5%3A%22zh-CN%22%3B%7D; _csrf=57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT%22%3B%7D; lang=7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a%3A2%3A%7Bi%3A0%3Bs%3A4%3A%22lang%22%3Bi%3A1%3Bs%3A2%3A%22ru%22%3B%7D; PHPSESSID=rln3olntrand3uoftgjudsh6r3'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en-US;q=0.9,en;q=0.8,uk;q=0.7,de;q=0.6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://localhost/site/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'localhost'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '52888'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.13.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Volumes/macStorage/webserver/yii2/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/site/user/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'SCRIPT_FILENAME' => '/Volumes/macStorage/webserver/yii2/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519474452.6582
+    'REQUEST_TIME' => 1519474452
+]
+2018-02-24 16:01:34 [127.0.0.1][-][j7fhp95ecmg03pgi0s55kdptto][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "1.2.5/all/jquery.tools.min.js". in /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('1.2.5/all/jquer...', Array)
+#1 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Volumes/macStorage/webserver/yii2/web/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Страница не найдена. in /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Volumes/macStorage/webserver/yii2/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2018-02-24 16:01:34 [127.0.0.1][-][j7fhp95ecmg03pgi0s55kdptto][info][application] $_COOKIE = [
+    'SessionID' => 'ca985113-5a66-4ae4-b16f-05d193b5508c'
+    'VisitorID' => '85992e19-c4b4-4182-9fb4-bca55b60a293&Exp=12/17/2020 5:45:08 AM'
+    'PHPSESSID' => 'j7fhp95ecmg03pgi0s55kdptto'
+    '_csrf' => 'fc017be73b35505b886603db9b5971c713dde9093a26a867c0f743b008d704dfa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"EAL8Eidsxk6i6I6zH3YtDAVqDAoAQotJ\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => '_www'
+    'HOME' => '/Library/WebServer'
+    'HTTP_COOKIE' => 'SessionID=ca985113-5a66-4ae4-b16f-05d193b5508c; VisitorID=85992e19-c4b4-4182-9fb4-bca55b60a293&Exp=12/17/2020 5:45:08 AM; PHPSESSID=j7fhp95ecmg03pgi0s55kdptto; _csrf=fc017be73b35505b886603db9b5971c713dde9093a26a867c0f743b008d704dfa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22EAL8Eidsxk6i6I6zH3YtDAVqDAoAQotJ%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en-US;q=0.9,en;q=0.8,uk;q=0.7,de;q=0.6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://fidmmuseum.org/?cmpid=GPPCNB-fashion-history'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'cdn.jquerytools.org'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '49859'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.13.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Volumes/macStorage/webserver/yii2/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/1.2.5/all/jquery.tools.min.js/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'SCRIPT_FILENAME' => '/Volumes/macStorage/webserver/yii2/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519488094.8108
+    'REQUEST_TIME' => 1519488094
+]
+2018-02-25 08:27:06 [127.0.0.1][-][j7fhp95ecmg03pgi0s55kdptto][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "1.2.5/all/jquery.tools.min.js". in /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('1.2.5/all/jquer...', Array)
+#1 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 /Volumes/macStorage/webserver/yii2/web/index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Страница не найдена. in /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /Volumes/macStorage/webserver/yii2/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2018-02-25 08:27:06 [127.0.0.1][-][j7fhp95ecmg03pgi0s55kdptto][info][application] $_COOKIE = [
+    'SessionID' => 'ca985113-5a66-4ae4-b16f-05d193b5508c'
+    'VisitorID' => '85992e19-c4b4-4182-9fb4-bca55b60a293&Exp=12/17/2020 5:45:08 AM'
+    'PHPSESSID' => 'j7fhp95ecmg03pgi0s55kdptto'
+    '_csrf' => 'fc017be73b35505b886603db9b5971c713dde9093a26a867c0f743b008d704dfa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"EAL8Eidsxk6i6I6zH3YtDAVqDAoAQotJ\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'USER' => '_www'
+    'HOME' => '/Library/WebServer'
+    'HTTP_COOKIE' => 'SessionID=ca985113-5a66-4ae4-b16f-05d193b5508c; VisitorID=85992e19-c4b4-4182-9fb4-bca55b60a293&Exp=12/17/2020 5:45:08 AM; PHPSESSID=j7fhp95ecmg03pgi0s55kdptto; _csrf=fc017be73b35505b886603db9b5971c713dde9093a26a867c0f743b008d704dfa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22EAL8Eidsxk6i6I6zH3YtDAVqDAoAQotJ%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en-US;q=0.9,en;q=0.8,uk;q=0.7,de;q=0.6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_REFERER' => 'http://fidmmuseum.org/?cmpid=GPPCNB-fashion-history'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'cdn.jquerytools.org'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '49991'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.13.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Volumes/macStorage/webserver/yii2/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/1.2.5/all/jquery.tools.min.js/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'SCRIPT_FILENAME' => '/Volumes/macStorage/webserver/yii2/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519547226.2628
+    'REQUEST_TIME' => 1519547226
+]
+2018-02-25 10:10:19 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][error][yii\base\ErrorException:2] yii\base\ErrorException: date() expects at least 1 parameter, 0 given in /Volumes/macStorage/webserver/yii2/controllers/SiteController.php:181
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'date() expects ...', '/Volumes/macSto...', 181, Array)
+#1 /Volumes/macStorage/webserver/yii2/controllers/SiteController.php(181): date()
+#2 [internal function]: app\controllers\SiteController->actionAbout()
+#3 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#4 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#5 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('about', Array)
+#6 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/about', Array)
+#7 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /Volumes/macStorage/webserver/yii2/web/index.php(12): yii\base\Application->run()
+#9 {main}
+2018-02-25 10:10:19 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.827355828.1515842508'
+    'language' => '3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a:2:{i:0;s:8:\"language\";i:1;s:5:\"zh-CN\";}'
+    '_csrf' => '57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT\";}'
+    'lang' => '7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a:2:{i:0;s:4:\"lang\";i:1;s:2:\"ru\";}'
+    'PHPSESSID' => 'rln3olntrand3uoftgjudsh6r3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'qesegi'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => '_www'
+    'HOME' => '/Library/WebServer'
+    'HTTP_COOKIE' => '_ga=GA1.1.827355828.1515842508; language=3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A5%3A%22zh-CN%22%3B%7D; _csrf=57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT%22%3B%7D; lang=7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a%3A2%3A%7Bi%3A0%3Bs%3A4%3A%22lang%22%3Bi%3A1%3Bs%3A2%3A%22ru%22%3B%7D; PHPSESSID=rln3olntrand3uoftgjudsh6r3'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en-US;q=0.9,en;q=0.8,uk;q=0.7,de;q=0.6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://localhost/site/contact/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'localhost'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '51787'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.13.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Volumes/macStorage/webserver/yii2/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/site/about/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'SCRIPT_FILENAME' => '/Volumes/macStorage/webserver/yii2/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519553419.532
+    'REQUEST_TIME' => 1519553419
+]
+2018-02-25 10:10:39 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][error][yii\base\ErrorException:2] yii\base\ErrorException: date() expects at least 1 parameter, 0 given in /Volumes/macStorage/webserver/yii2/controllers/SiteController.php:181
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'date() expects ...', '/Volumes/macSto...', 181, Array)
+#1 /Volumes/macStorage/webserver/yii2/controllers/SiteController.php(181): date()
+#2 [internal function]: app\controllers\SiteController->actionAbout()
+#3 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#4 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#5 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('about', Array)
+#6 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/about', Array)
+#7 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /Volumes/macStorage/webserver/yii2/web/index.php(12): yii\base\Application->run()
+#9 {main}
+2018-02-25 10:10:39 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.827355828.1515842508'
+    'language' => '3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a:2:{i:0;s:8:\"language\";i:1;s:5:\"zh-CN\";}'
+    '_csrf' => '57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT\";}'
+    'lang' => '7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a:2:{i:0;s:4:\"lang\";i:1;s:2:\"ru\";}'
+    'PHPSESSID' => 'rln3olntrand3uoftgjudsh6r3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'qesegi'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => '_www'
+    'HOME' => '/Library/WebServer'
+    'HTTP_COOKIE' => '_ga=GA1.1.827355828.1515842508; language=3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A5%3A%22zh-CN%22%3B%7D; _csrf=57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT%22%3B%7D; lang=7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a%3A2%3A%7Bi%3A0%3Bs%3A4%3A%22lang%22%3Bi%3A1%3Bs%3A2%3A%22ru%22%3B%7D; PHPSESSID=rln3olntrand3uoftgjudsh6r3'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en-US;q=0.9,en;q=0.8,uk;q=0.7,de;q=0.6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://localhost/site/contact/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'localhost'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '51790'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.13.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Volumes/macStorage/webserver/yii2/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/site/about/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'SCRIPT_FILENAME' => '/Volumes/macStorage/webserver/yii2/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519553439.3707
+    'REQUEST_TIME' => 1519553439
+]
+2018-02-25 10:10:53 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][error][yii\base\InvalidParamException] Exception: DateTime::__construct(): Failed to parse time string (2018:02:25) at position 4 (:): Unexpected character in /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/i18n/Formatter.php:835
+Stack trace:
+#0 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/i18n/Formatter.php(835): DateTime->__construct('2018:02:25', Object(DateTimeZone))
+#1 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/i18n/Formatter.php(735): yii\i18n\Formatter->normalizeDatetimeValue('2018:02:25', true)
+#2 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/i18n/Formatter.php(629): yii\i18n\Formatter->formatDateTimeValue('2018:02:25', 'long', 'date')
+#3 /Volumes/macStorage/webserver/yii2/controllers/SiteController.php(181): yii\i18n\Formatter->asDate('2018:02:25', 'long')
+#4 [internal function]: app\controllers\SiteController->actionAbout()
+#5 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#6 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('about', Array)
+#8 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/about', Array)
+#9 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /Volumes/macStorage/webserver/yii2/web/index.php(12): yii\base\Application->run()
+#11 {main}
+
+Next yii\base\InvalidParamException: '2018:02:25' is not a valid date time value: DateTime::__construct(): Failed to parse time string (2018:02:25) at position 4 (:): Unexpected character
+Array
+(
+    [warning_count] => 0
+    [warnings] => Array
+        (
+        )
+
+    [error_count] => 2
+    [errors] => Array
+        (
+            [4] => Unexpected character
+            [5] => Double time specification
+        )
+
+)
+ in /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/i18n/Formatter.php:846
+Stack trace:
+#0 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/i18n/Formatter.php(735): yii\i18n\Formatter->normalizeDatetimeValue('2018:02:25', true)
+#1 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/i18n/Formatter.php(629): yii\i18n\Formatter->formatDateTimeValue('2018:02:25', 'long', 'date')
+#2 /Volumes/macStorage/webserver/yii2/controllers/SiteController.php(181): yii\i18n\Formatter->asDate('2018:02:25', 'long')
+#3 [internal function]: app\controllers\SiteController->actionAbout()
+#4 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#6 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('about', Array)
+#7 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/about', Array)
+#8 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /Volumes/macStorage/webserver/yii2/web/index.php(12): yii\base\Application->run()
+#10 {main}
+2018-02-25 10:10:53 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.827355828.1515842508'
+    'language' => '3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a:2:{i:0;s:8:\"language\";i:1;s:5:\"zh-CN\";}'
+    '_csrf' => '57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT\";}'
+    'lang' => '7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a:2:{i:0;s:4:\"lang\";i:1;s:2:\"ru\";}'
+    'PHPSESSID' => 'rln3olntrand3uoftgjudsh6r3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'qesegi'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => '_www'
+    'HOME' => '/Library/WebServer'
+    'HTTP_COOKIE' => '_ga=GA1.1.827355828.1515842508; language=3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A5%3A%22zh-CN%22%3B%7D; _csrf=57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT%22%3B%7D; lang=7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a%3A2%3A%7Bi%3A0%3Bs%3A4%3A%22lang%22%3Bi%3A1%3Bs%3A2%3A%22ru%22%3B%7D; PHPSESSID=rln3olntrand3uoftgjudsh6r3'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en-US;q=0.9,en;q=0.8,uk;q=0.7,de;q=0.6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://localhost/site/contact/'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'localhost'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '51790'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.13.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Volumes/macStorage/webserver/yii2/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/site/about/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'SCRIPT_FILENAME' => '/Volumes/macStorage/webserver/yii2/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519553453.1544
+    'REQUEST_TIME' => 1519553453
+]
+2018-02-25 10:13:34 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: yii\i18n\Formatter::locale() in /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Component.php:294
+Stack trace:
+#0 /Volumes/macStorage/webserver/yii2/controllers/SiteController.php(181): yii\base\Component->__call('locale', Array)
+#1 [internal function]: app\controllers\SiteController->actionAbout()
+#2 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('about', Array)
+#5 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/about', Array)
+#6 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /Volumes/macStorage/webserver/yii2/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2018-02-25 10:13:34 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.827355828.1515842508'
+    'language' => '3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a:2:{i:0;s:8:\"language\";i:1;s:5:\"zh-CN\";}'
+    '_csrf' => '57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT\";}'
+    'lang' => '7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a:2:{i:0;s:4:\"lang\";i:1;s:2:\"ru\";}'
+    'PHPSESSID' => 'rln3olntrand3uoftgjudsh6r3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'qesegi'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => '_www'
+    'HOME' => '/Library/WebServer'
+    'HTTP_COOKIE' => '_ga=GA1.1.827355828.1515842508; language=3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A5%3A%22zh-CN%22%3B%7D; _csrf=57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT%22%3B%7D; lang=7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a%3A2%3A%7Bi%3A0%3Bs%3A4%3A%22lang%22%3Bi%3A1%3Bs%3A2%3A%22ru%22%3B%7D; PHPSESSID=rln3olntrand3uoftgjudsh6r3'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en-US;q=0.9,en;q=0.8,uk;q=0.7,de;q=0.6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'localhost'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '51820'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.13.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Volumes/macStorage/webserver/yii2/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/site/about/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'SCRIPT_FILENAME' => '/Volumes/macStorage/webserver/yii2/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519553614.2336
+    'REQUEST_TIME' => 1519553614
+]
+2018-02-25 12:22:49 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][error][yii\base\ErrorException:8] yii\base\ErrorException: Array to string conversion in /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/i18n/Formatter.php:846
+Stack trace:
+#0 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/i18n/Formatter.php(846): yii\base\ErrorHandler->handleError(8, 'Array to string...', '/Volumes/macSto...', 846, Array)
+#1 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/i18n/Formatter.php(735): yii\i18n\Formatter->normalizeDatetimeValue(Array, true)
+#2 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/i18n/Formatter.php(666): yii\i18n\Formatter->formatDateTimeValue(Array, 'long', 'time')
+#3 /Volumes/macStorage/webserver/yii2/controllers/SiteController.php(188): yii\i18n\Formatter->asTime(Array, 'long')
+#4 [internal function]: app\controllers\SiteController->actionAbout()
+#5 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#6 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('about', Array)
+#8 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/about', Array)
+#9 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /Volumes/macStorage/webserver/yii2/web/index.php(12): yii\base\Application->run()
+#11 {main}
+2018-02-25 12:22:49 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.827355828.1515842508'
+    'language' => '3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a:2:{i:0;s:8:\"language\";i:1;s:5:\"zh-CN\";}'
+    '_csrf' => '57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT\";}'
+    'lang' => '7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a:2:{i:0;s:4:\"lang\";i:1;s:2:\"ru\";}'
+    'PHPSESSID' => 'rln3olntrand3uoftgjudsh6r3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'qesegi'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => '_www'
+    'HOME' => '/Library/WebServer'
+    'HTTP_COOKIE' => '_ga=GA1.1.827355828.1515842508; language=3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A5%3A%22zh-CN%22%3B%7D; _csrf=57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT%22%3B%7D; lang=7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a%3A2%3A%7Bi%3A0%3Bs%3A4%3A%22lang%22%3Bi%3A1%3Bs%3A2%3A%22ru%22%3B%7D; PHPSESSID=rln3olntrand3uoftgjudsh6r3'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en-US;q=0.9,en;q=0.8,uk;q=0.7,de;q=0.6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'localhost'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '51927'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.13.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Volumes/macStorage/webserver/yii2/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/site/about/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'SCRIPT_FILENAME' => '/Volumes/macStorage/webserver/yii2/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519554169.2675
+    'REQUEST_TIME' => 1519554169
+]
+2018-02-25 12:22:59 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][error][yii\base\ErrorException:8] yii\base\ErrorException: Array to string conversion in /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/i18n/Formatter.php:846
+Stack trace:
+#0 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/i18n/Formatter.php(846): yii\base\ErrorHandler->handleError(8, 'Array to string...', '/Volumes/macSto...', 846, Array)
+#1 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/i18n/Formatter.php(735): yii\i18n\Formatter->normalizeDatetimeValue(Array, true)
+#2 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/i18n/Formatter.php(629): yii\i18n\Formatter->formatDateTimeValue(Array, 'long', 'date')
+#3 /Volumes/macStorage/webserver/yii2/controllers/SiteController.php(188): yii\i18n\Formatter->asDate(Array, 'long')
+#4 [internal function]: app\controllers\SiteController->actionAbout()
+#5 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#6 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('about', Array)
+#8 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/about', Array)
+#9 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /Volumes/macStorage/webserver/yii2/web/index.php(12): yii\base\Application->run()
+#11 {main}
+2018-02-25 12:22:59 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.827355828.1515842508'
+    'language' => '3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a:2:{i:0;s:8:\"language\";i:1;s:5:\"zh-CN\";}'
+    '_csrf' => '57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT\";}'
+    'lang' => '7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a:2:{i:0;s:4:\"lang\";i:1;s:2:\"ru\";}'
+    'PHPSESSID' => 'rln3olntrand3uoftgjudsh6r3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'qesegi'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => '_www'
+    'HOME' => '/Library/WebServer'
+    'HTTP_COOKIE' => '_ga=GA1.1.827355828.1515842508; language=3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A5%3A%22zh-CN%22%3B%7D; _csrf=57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT%22%3B%7D; lang=7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a%3A2%3A%7Bi%3A0%3Bs%3A4%3A%22lang%22%3Bi%3A1%3Bs%3A2%3A%22ru%22%3B%7D; PHPSESSID=rln3olntrand3uoftgjudsh6r3'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en-US;q=0.9,en;q=0.8,uk;q=0.7,de;q=0.6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'localhost'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '51934'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.13.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Volumes/macStorage/webserver/yii2/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/site/about/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'SCRIPT_FILENAME' => '/Volumes/macStorage/webserver/yii2/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519554179.4278
+    'REQUEST_TIME' => 1519554179
+]
+2018-02-25 12:23:00 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][error][yii\base\ErrorException:8] yii\base\ErrorException: Array to string conversion in /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/i18n/Formatter.php:846
+Stack trace:
+#0 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/i18n/Formatter.php(846): yii\base\ErrorHandler->handleError(8, 'Array to string...', '/Volumes/macSto...', 846, Array)
+#1 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/i18n/Formatter.php(735): yii\i18n\Formatter->normalizeDatetimeValue(Array, true)
+#2 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/i18n/Formatter.php(629): yii\i18n\Formatter->formatDateTimeValue(Array, 'long', 'date')
+#3 /Volumes/macStorage/webserver/yii2/controllers/SiteController.php(188): yii\i18n\Formatter->asDate(Array, 'long')
+#4 [internal function]: app\controllers\SiteController->actionAbout()
+#5 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#6 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('about', Array)
+#8 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/about', Array)
+#9 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /Volumes/macStorage/webserver/yii2/web/index.php(12): yii\base\Application->run()
+#11 {main}
+2018-02-25 12:23:00 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.827355828.1515842508'
+    'language' => '3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a:2:{i:0;s:8:\"language\";i:1;s:5:\"zh-CN\";}'
+    '_csrf' => '57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT\";}'
+    'lang' => '7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a:2:{i:0;s:4:\"lang\";i:1;s:2:\"ru\";}'
+    'PHPSESSID' => 'rln3olntrand3uoftgjudsh6r3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'qesegi'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => '_www'
+    'HOME' => '/Library/WebServer'
+    'HTTP_COOKIE' => '_ga=GA1.1.827355828.1515842508; language=3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A5%3A%22zh-CN%22%3B%7D; _csrf=57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT%22%3B%7D; lang=7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a%3A2%3A%7Bi%3A0%3Bs%3A4%3A%22lang%22%3Bi%3A1%3Bs%3A2%3A%22ru%22%3B%7D; PHPSESSID=rln3olntrand3uoftgjudsh6r3'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en-US;q=0.9,en;q=0.8,uk;q=0.7,de;q=0.6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'localhost'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '51934'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.13.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Volumes/macStorage/webserver/yii2/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/site/about/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'SCRIPT_FILENAME' => '/Volumes/macStorage/webserver/yii2/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519554180.035
+    'REQUEST_TIME' => 1519554180
+]
+2018-02-25 12:23:07 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][error][yii\base\ErrorException:8] yii\base\ErrorException: Array to string conversion in /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/i18n/Formatter.php:846
+Stack trace:
+#0 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/i18n/Formatter.php(846): yii\base\ErrorHandler->handleError(8, 'Array to string...', '/Volumes/macSto...', 846, Array)
+#1 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/i18n/Formatter.php(740): yii\i18n\Formatter->normalizeDatetimeValue(Array)
+#2 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/i18n/Formatter.php(703): yii\i18n\Formatter->formatDateTimeValue(Array, 'long', 'datetime')
+#3 /Volumes/macStorage/webserver/yii2/controllers/SiteController.php(188): yii\i18n\Formatter->asDatetime(Array, 'long')
+#4 [internal function]: app\controllers\SiteController->actionAbout()
+#5 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#6 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('about', Array)
+#8 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/about', Array)
+#9 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /Volumes/macStorage/webserver/yii2/web/index.php(12): yii\base\Application->run()
+#11 {main}
+2018-02-25 12:23:07 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.827355828.1515842508'
+    'language' => '3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a:2:{i:0;s:8:\"language\";i:1;s:5:\"zh-CN\";}'
+    '_csrf' => '57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT\";}'
+    'lang' => '7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a:2:{i:0;s:4:\"lang\";i:1;s:2:\"ru\";}'
+    'PHPSESSID' => 'rln3olntrand3uoftgjudsh6r3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'qesegi'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => '_www'
+    'HOME' => '/Library/WebServer'
+    'HTTP_COOKIE' => '_ga=GA1.1.827355828.1515842508; language=3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A5%3A%22zh-CN%22%3B%7D; _csrf=57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT%22%3B%7D; lang=7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a%3A2%3A%7Bi%3A0%3Bs%3A4%3A%22lang%22%3Bi%3A1%3Bs%3A2%3A%22ru%22%3B%7D; PHPSESSID=rln3olntrand3uoftgjudsh6r3'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en-US;q=0.9,en;q=0.8,uk;q=0.7,de;q=0.6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'localhost'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '51934'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.13.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Volumes/macStorage/webserver/yii2/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/site/about/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'SCRIPT_FILENAME' => '/Volumes/macStorage/webserver/yii2/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519554187.3325
+    'REQUEST_TIME' => 1519554187
+]
+2018-02-25 12:23:07 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][error][yii\base\ErrorException:8] yii\base\ErrorException: Array to string conversion in /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/i18n/Formatter.php:846
+Stack trace:
+#0 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/i18n/Formatter.php(846): yii\base\ErrorHandler->handleError(8, 'Array to string...', '/Volumes/macSto...', 846, Array)
+#1 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/i18n/Formatter.php(740): yii\i18n\Formatter->normalizeDatetimeValue(Array)
+#2 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/i18n/Formatter.php(703): yii\i18n\Formatter->formatDateTimeValue(Array, 'long', 'datetime')
+#3 /Volumes/macStorage/webserver/yii2/controllers/SiteController.php(188): yii\i18n\Formatter->asDatetime(Array, 'long')
+#4 [internal function]: app\controllers\SiteController->actionAbout()
+#5 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#6 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('about', Array)
+#8 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/about', Array)
+#9 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /Volumes/macStorage/webserver/yii2/web/index.php(12): yii\base\Application->run()
+#11 {main}
+2018-02-25 12:23:07 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.827355828.1515842508'
+    'language' => '3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a:2:{i:0;s:8:\"language\";i:1;s:5:\"zh-CN\";}'
+    '_csrf' => '57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT\";}'
+    'lang' => '7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a:2:{i:0;s:4:\"lang\";i:1;s:2:\"ru\";}'
+    'PHPSESSID' => 'rln3olntrand3uoftgjudsh6r3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'qesegi'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => '_www'
+    'HOME' => '/Library/WebServer'
+    'HTTP_COOKIE' => '_ga=GA1.1.827355828.1515842508; language=3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A5%3A%22zh-CN%22%3B%7D; _csrf=57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT%22%3B%7D; lang=7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a%3A2%3A%7Bi%3A0%3Bs%3A4%3A%22lang%22%3Bi%3A1%3Bs%3A2%3A%22ru%22%3B%7D; PHPSESSID=rln3olntrand3uoftgjudsh6r3'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en-US;q=0.9,en;q=0.8,uk;q=0.7,de;q=0.6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'localhost'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '51934'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.13.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Volumes/macStorage/webserver/yii2/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/site/about/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'SCRIPT_FILENAME' => '/Volumes/macStorage/webserver/yii2/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519554187.9467
+    'REQUEST_TIME' => 1519554187
+]
+2018-02-25 12:23:11 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][error][yii\base\ErrorException:8] yii\base\ErrorException: Array to string conversion in /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/i18n/Formatter.php:846
+Stack trace:
+#0 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/i18n/Formatter.php(846): yii\base\ErrorHandler->handleError(8, 'Array to string...', '/Volumes/macSto...', 846, Array)
+#1 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/i18n/Formatter.php(740): yii\i18n\Formatter->normalizeDatetimeValue(Array)
+#2 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/i18n/Formatter.php(703): yii\i18n\Formatter->formatDateTimeValue(Array, 'medium', 'datetime')
+#3 /Volumes/macStorage/webserver/yii2/controllers/SiteController.php(188): yii\i18n\Formatter->asDatetime(Array)
+#4 [internal function]: app\controllers\SiteController->actionAbout()
+#5 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#6 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('about', Array)
+#8 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/about', Array)
+#9 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /Volumes/macStorage/webserver/yii2/web/index.php(12): yii\base\Application->run()
+#11 {main}
+2018-02-25 12:23:11 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.827355828.1515842508'
+    'language' => '3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a:2:{i:0;s:8:\"language\";i:1;s:5:\"zh-CN\";}'
+    '_csrf' => '57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT\";}'
+    'lang' => '7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a:2:{i:0;s:4:\"lang\";i:1;s:2:\"ru\";}'
+    'PHPSESSID' => 'rln3olntrand3uoftgjudsh6r3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'qesegi'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => '_www'
+    'HOME' => '/Library/WebServer'
+    'HTTP_COOKIE' => '_ga=GA1.1.827355828.1515842508; language=3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A5%3A%22zh-CN%22%3B%7D; _csrf=57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT%22%3B%7D; lang=7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a%3A2%3A%7Bi%3A0%3Bs%3A4%3A%22lang%22%3Bi%3A1%3Bs%3A2%3A%22ru%22%3B%7D; PHPSESSID=rln3olntrand3uoftgjudsh6r3'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en-US;q=0.9,en;q=0.8,uk;q=0.7,de;q=0.6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'localhost'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '51934'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.13.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Volumes/macStorage/webserver/yii2/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/site/about/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'SCRIPT_FILENAME' => '/Volumes/macStorage/webserver/yii2/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519554191.2268
+    'REQUEST_TIME' => 1519554191
+]
+2018-02-25 12:31:44 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][error][Error] Error: Class 'app\controllers\NumberFormatter' not found in /Volumes/macStorage/webserver/yii2/controllers/SiteController.php:191
+Stack trace:
+#0 [internal function]: app\controllers\SiteController->actionAbout()
+#1 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#2 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#3 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('about', Array)
+#4 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/about', Array)
+#5 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 /Volumes/macStorage/webserver/yii2/web/index.php(12): yii\base\Application->run()
+#7 {main}
+2018-02-25 12:31:44 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.827355828.1515842508'
+    'language' => '3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a:2:{i:0;s:8:\"language\";i:1;s:5:\"zh-CN\";}'
+    '_csrf' => '57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT\";}'
+    'lang' => '7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a:2:{i:0;s:4:\"lang\";i:1;s:2:\"ru\";}'
+    'PHPSESSID' => 'rln3olntrand3uoftgjudsh6r3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'qesegi'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => '_www'
+    'HOME' => '/Library/WebServer'
+    'HTTP_COOKIE' => '_ga=GA1.1.827355828.1515842508; language=3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A5%3A%22zh-CN%22%3B%7D; _csrf=57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT%22%3B%7D; lang=7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a%3A2%3A%7Bi%3A0%3Bs%3A4%3A%22lang%22%3Bi%3A1%3Bs%3A2%3A%22ru%22%3B%7D; PHPSESSID=rln3olntrand3uoftgjudsh6r3'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en-US;q=0.9,en;q=0.8,uk;q=0.7,de;q=0.6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'localhost'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '52102'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.13.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Volumes/macStorage/webserver/yii2/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/site/about/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'SCRIPT_FILENAME' => '/Volumes/macStorage/webserver/yii2/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519554704.3182
+    'REQUEST_TIME' => 1519554704
+]
+2018-02-25 12:32:09 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][error][Error] Error: Class 'NumberFormatter' not found in /Volumes/macStorage/webserver/yii2/controllers/SiteController.php:192
+Stack trace:
+#0 [internal function]: app\controllers\SiteController->actionAbout()
+#1 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#2 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#3 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('about', Array)
+#4 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/about', Array)
+#5 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 /Volumes/macStorage/webserver/yii2/web/index.php(12): yii\base\Application->run()
+#7 {main}
+2018-02-25 12:32:09 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.827355828.1515842508'
+    'language' => '3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a:2:{i:0;s:8:\"language\";i:1;s:5:\"zh-CN\";}'
+    '_csrf' => '57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT\";}'
+    'lang' => '7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a:2:{i:0;s:4:\"lang\";i:1;s:2:\"ru\";}'
+    'PHPSESSID' => 'rln3olntrand3uoftgjudsh6r3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'qesegi'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => '_www'
+    'HOME' => '/Library/WebServer'
+    'HTTP_COOKIE' => '_ga=GA1.1.827355828.1515842508; language=3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A5%3A%22zh-CN%22%3B%7D; _csrf=57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT%22%3B%7D; lang=7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a%3A2%3A%7Bi%3A0%3Bs%3A4%3A%22lang%22%3Bi%3A1%3Bs%3A2%3A%22ru%22%3B%7D; PHPSESSID=rln3olntrand3uoftgjudsh6r3'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en-US;q=0.9,en;q=0.8,uk;q=0.7,de;q=0.6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'localhost'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '52107'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.13.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Volumes/macStorage/webserver/yii2/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/site/about/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'SCRIPT_FILENAME' => '/Volumes/macStorage/webserver/yii2/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519554729.2618
+    'REQUEST_TIME' => 1519554729
+]
+2018-02-25 12:32:10 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][error][Error] Error: Class 'NumberFormatter' not found in /Volumes/macStorage/webserver/yii2/controllers/SiteController.php:192
+Stack trace:
+#0 [internal function]: app\controllers\SiteController->actionAbout()
+#1 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#2 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#3 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('about', Array)
+#4 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/about', Array)
+#5 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 /Volumes/macStorage/webserver/yii2/web/index.php(12): yii\base\Application->run()
+#7 {main}
+2018-02-25 12:32:10 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.827355828.1515842508'
+    'language' => '3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a:2:{i:0;s:8:\"language\";i:1;s:5:\"zh-CN\";}'
+    '_csrf' => '57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT\";}'
+    'lang' => '7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a:2:{i:0;s:4:\"lang\";i:1;s:2:\"ru\";}'
+    'PHPSESSID' => 'rln3olntrand3uoftgjudsh6r3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'qesegi'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => '_www'
+    'HOME' => '/Library/WebServer'
+    'HTTP_COOKIE' => '_ga=GA1.1.827355828.1515842508; language=3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A5%3A%22zh-CN%22%3B%7D; _csrf=57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT%22%3B%7D; lang=7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a%3A2%3A%7Bi%3A0%3Bs%3A4%3A%22lang%22%3Bi%3A1%3Bs%3A2%3A%22ru%22%3B%7D; PHPSESSID=rln3olntrand3uoftgjudsh6r3'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en-US;q=0.9,en;q=0.8,uk;q=0.7,de;q=0.6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'localhost'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '52107'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.13.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Volumes/macStorage/webserver/yii2/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/site/about/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'SCRIPT_FILENAME' => '/Volumes/macStorage/webserver/yii2/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519554730.183
+    'REQUEST_TIME' => 1519554730
+]
+2018-02-25 12:56:09 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: t in /Volumes/macStorage/webserver/yii2/views/site/about.php:13
+Stack trace:
+#0 /Volumes/macStorage/webserver/yii2/views/site/about.php(13): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/Volumes/macSto...', 13, Array)
+#1 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/View.php(332): require('/Volumes/macSto...')
+#2 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/Volumes/macSto...', Array)
+#3 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/Volumes/macSto...', Array, Object(app\controllers\SiteController))
+#4 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('about', Array, Object(app\controllers\SiteController))
+#5 /Volumes/macStorage/webserver/yii2/controllers/SiteController.php(212): yii\base\Controller->render('about', Array)
+#6 [internal function]: app\controllers\SiteController->actionAbout()
+#7 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('about', Array)
+#10 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/about', Array)
+#11 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /Volumes/macStorage/webserver/yii2/web/index.php(12): yii\base\Application->run()
+#13 {main}
+2018-02-25 12:56:09 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.827355828.1515842508'
+    'language' => '3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a:2:{i:0;s:8:\"language\";i:1;s:5:\"zh-CN\";}'
+    '_csrf' => '57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT\";}'
+    'lang' => '7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a:2:{i:0;s:4:\"lang\";i:1;s:2:\"ru\";}'
+    'PHPSESSID' => 'rln3olntrand3uoftgjudsh6r3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'qesegi'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => '_www'
+    'HOME' => '/Library/WebServer'
+    'HTTP_COOKIE' => '_ga=GA1.1.827355828.1515842508; language=3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A5%3A%22zh-CN%22%3B%7D; _csrf=57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT%22%3B%7D; lang=7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a%3A2%3A%7Bi%3A0%3Bs%3A4%3A%22lang%22%3Bi%3A1%3Bs%3A2%3A%22ru%22%3B%7D; PHPSESSID=rln3olntrand3uoftgjudsh6r3'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en-US;q=0.9,en;q=0.8,uk;q=0.7,de;q=0.6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'localhost'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '54153'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.13.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Volumes/macStorage/webserver/yii2/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/site/about/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'SCRIPT_FILENAME' => '/Volumes/macStorage/webserver/yii2/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519563369.678
+    'REQUEST_TIME' => 1519563369
+]
+2018-02-25 12:56:09 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: t in /Volumes/macStorage/webserver/yii2/views/site/about.php:13
+Stack trace:
+#0 /Volumes/macStorage/webserver/yii2/views/site/about.php(13): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/Volumes/macSto...', 13, Array)
+#1 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/View.php(332): require('/Volumes/macSto...')
+#2 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/Volumes/macSto...', Array)
+#3 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/Volumes/macSto...', Array, Object(app\controllers\SiteController))
+#4 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('about', Array, Object(app\controllers\SiteController))
+#5 /Volumes/macStorage/webserver/yii2/controllers/SiteController.php(212): yii\base\Controller->render('about', Array)
+#6 [internal function]: app\controllers\SiteController->actionAbout()
+#7 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('about', Array)
+#10 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/about', Array)
+#11 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /Volumes/macStorage/webserver/yii2/web/index.php(12): yii\base\Application->run()
+#13 {main}
+2018-02-25 12:56:09 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.827355828.1515842508'
+    'language' => '3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a:2:{i:0;s:8:\"language\";i:1;s:5:\"zh-CN\";}'
+    '_csrf' => '57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT\";}'
+    'lang' => '7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a:2:{i:0;s:4:\"lang\";i:1;s:2:\"ru\";}'
+    'PHPSESSID' => 'rln3olntrand3uoftgjudsh6r3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'qesegi'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => '_www'
+    'HOME' => '/Library/WebServer'
+    'HTTP_COOKIE' => '_ga=GA1.1.827355828.1515842508; language=3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A5%3A%22zh-CN%22%3B%7D; _csrf=57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT%22%3B%7D; lang=7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a%3A2%3A%7Bi%3A0%3Bs%3A4%3A%22lang%22%3Bi%3A1%3Bs%3A2%3A%22ru%22%3B%7D; PHPSESSID=rln3olntrand3uoftgjudsh6r3'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en-US;q=0.9,en;q=0.8,uk;q=0.7,de;q=0.6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'localhost'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '54156'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.13.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Volumes/macStorage/webserver/yii2/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/site/about/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'SCRIPT_FILENAME' => '/Volumes/macStorage/webserver/yii2/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519563369.7729
+    'REQUEST_TIME' => 1519563369
+]
+2018-02-25 12:56:45 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: t in /Volumes/macStorage/webserver/yii2/views/site/about.php:13
+Stack trace:
+#0 /Volumes/macStorage/webserver/yii2/views/site/about.php(13): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/Volumes/macSto...', 13, Array)
+#1 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/View.php(332): require('/Volumes/macSto...')
+#2 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/Volumes/macSto...', Array)
+#3 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/Volumes/macSto...', Array, Object(app\controllers\SiteController))
+#4 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('about', Array, Object(app\controllers\SiteController))
+#5 /Volumes/macStorage/webserver/yii2/controllers/SiteController.php(212): yii\base\Controller->render('about', Array)
+#6 [internal function]: app\controllers\SiteController->actionAbout()
+#7 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('about', Array)
+#10 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/about', Array)
+#11 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /Volumes/macStorage/webserver/yii2/web/index.php(12): yii\base\Application->run()
+#13 {main}
+2018-02-25 12:56:45 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.827355828.1515842508'
+    'language' => '3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a:2:{i:0;s:8:\"language\";i:1;s:5:\"zh-CN\";}'
+    '_csrf' => '57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT\";}'
+    'lang' => '7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a:2:{i:0;s:4:\"lang\";i:1;s:2:\"ru\";}'
+    'PHPSESSID' => 'rln3olntrand3uoftgjudsh6r3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'qesegi'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => '_www'
+    'HOME' => '/Library/WebServer'
+    'HTTP_COOKIE' => '_ga=GA1.1.827355828.1515842508; language=3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A5%3A%22zh-CN%22%3B%7D; _csrf=57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT%22%3B%7D; lang=7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a%3A2%3A%7Bi%3A0%3Bs%3A4%3A%22lang%22%3Bi%3A1%3Bs%3A2%3A%22ru%22%3B%7D; PHPSESSID=rln3olntrand3uoftgjudsh6r3'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en-US;q=0.9,en;q=0.8,uk;q=0.7,de;q=0.6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'localhost'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '54160'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.13.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Volumes/macStorage/webserver/yii2/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/site/about/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'SCRIPT_FILENAME' => '/Volumes/macStorage/webserver/yii2/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519563405.0035
+    'REQUEST_TIME' => 1519563405
+]
+2018-02-25 12:56:46 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: t in /Volumes/macStorage/webserver/yii2/views/site/about.php:13
+Stack trace:
+#0 /Volumes/macStorage/webserver/yii2/views/site/about.php(13): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/Volumes/macSto...', 13, Array)
+#1 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/View.php(332): require('/Volumes/macSto...')
+#2 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/View.php(250): yii\base\View->renderPhpFile('/Volumes/macSto...', Array)
+#3 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/View.php(152): yii\base\View->renderFile('/Volumes/macSto...', Array, Object(app\controllers\SiteController))
+#4 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('about', Array, Object(app\controllers\SiteController))
+#5 /Volumes/macStorage/webserver/yii2/controllers/SiteController.php(212): yii\base\Controller->render('about', Array)
+#6 [internal function]: app\controllers\SiteController->actionAbout()
+#7 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('about', Array)
+#10 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/about', Array)
+#11 /Volumes/macStorage/webserver/yii2/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /Volumes/macStorage/webserver/yii2/web/index.php(12): yii\base\Application->run()
+#13 {main}
+2018-02-25 12:56:45 [127.0.0.1][-][rln3olntrand3uoftgjudsh6r3][info][application] $_COOKIE = [
+    '_ga' => 'GA1.1.827355828.1515842508'
+    'language' => '3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a:2:{i:0;s:8:\"language\";i:1;s:5:\"zh-CN\";}'
+    '_csrf' => '57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT\";}'
+    'lang' => '7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a:2:{i:0;s:4:\"lang\";i:1;s:2:\"ru\";}'
+    'PHPSESSID' => 'rln3olntrand3uoftgjudsh6r3'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__captcha/site/captcha' => 'qesegi'
+    '__captcha/site/captchacount' => 1
+]
+
+$_SERVER = [
+    'USER' => '_www'
+    'HOME' => '/Library/WebServer'
+    'HTTP_COOKIE' => '_ga=GA1.1.827355828.1515842508; language=3ff5dd412e83a90aac1a95982e6ce6de00d5859840df18ba3f703b24eae8cf23a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22language%22%3Bi%3A1%3Bs%3A5%3A%22zh-CN%22%3B%7D; _csrf=57e4d99fa618f70b6e12330cbae0706edc4b7fc4c7583ef9aa24e140815c5b01a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22WudKyrNPnsLHgmfb9rX9PT59UEYxBbPT%22%3B%7D; lang=7cab7a30f5cfe6429f56a225537a31f47edd28d16d639120449b700ef13c9133a%3A2%3A%7Bi%3A0%3Bs%3A4%3A%22lang%22%3Bi%3A1%3Bs%3A2%3A%22ru%22%3B%7D; PHPSESSID=rln3olntrand3uoftgjudsh6r3'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en-US;q=0.9,en;q=0.8,uk;q=0.7,de;q=0.6'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.167 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'localhost'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'REMOTE_PORT' => '54160'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_SOFTWARE' => 'nginx/1.13.4'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/Volumes/macStorage/webserver/yii2/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/site/about/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'SCRIPT_FILENAME' => '/Volumes/macStorage/webserver/yii2/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1519563405.9877
+    'REQUEST_TIME' => 1519563405
+]
