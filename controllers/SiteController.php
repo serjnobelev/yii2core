@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use app\components\Foo;
 use app\models\Category;
+use app\models\User;
 use Yii;
 use yii\filters\AccessControl;
 use yii\validators\EmailValidator;
@@ -93,18 +94,18 @@ class SiteController extends Controller
 
     public function actionUser()
     {
-        $email = 's.nobel1evgmail.com';
-        $v = new EmailValidator();
-
         $model = new UserForm();
 
-        if(Yii::$app->request->isPost)
+        if(Yii::$app->request->isPost && $model->load(Yii::$app->request->post()))
         {
-            if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+            $model->signup();
+
                 echo '<pre>';
-                var_dump($model->attributes);
+                var_dump($model);
                 die;
-            }
+
+            echo '<pre>';
+            var_dump($model->errors);
         } else {
             return $this->render('user', [
                 'model' => $model,

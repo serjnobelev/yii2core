@@ -33,7 +33,8 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
     public function rules()
     {
         return [
-            [['email', 'password', 'photo'], 'string', 'max' => 255],
+            [['name', 'email', 'password', 'photo'], 'string', 'max' => 255],
+            [['about'], 'string'],
             [['isAdmin'], 'integer'],
         ];
     }
@@ -50,6 +51,7 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
             'password' => 'Password',
             'isAdmin' => 'Is Admin',
             'photo' => 'Photo',
+            'about' => 'About',
         ];
     }
 

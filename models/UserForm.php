@@ -4,6 +4,7 @@ namespace app\models;
 
 use Yii;
 use yii\base\Model;
+use app\models\User;
 
 /**
  * LoginForm is the model behind the login form.
@@ -31,34 +32,27 @@ class UserForm extends Model
         return [
             // username and password are both required
             [['name', 'email', 'about'], 'trim'],
+            ['name', 'string'],
             ['name', 'required', 'message' => Yii::t('userformmsg', 'Поле имя не может быть пустым')],
             [['email', 'password'], 'required'],
             [['email'], 'email'],
+            ['email', 'unique', 'targetClass' => 'app\models\User', 'targetAttribute' => 'email'],
             [['about'], 'default', 'value' => 'Пусто'],
             // rememberMe must be a boolean value
             ['isAdmin', 'boolean'],
-            ['photo', 'image'],
-            // password is validated by validatePassword()
-            ['password', 'validatePassword'],
+            ['photo', 'image']
         ];
     }
 
-    /**
-     * Validates the password.
-     * This method serves as the inline validation for password.
-     *
-     * @param string $attribute the attribute currently being validated
-     * @param array $params the additional name-value pairs given in the rule
-     */
-    public function validatePassword($attribute, $params)
+    public function signup()
     {
-        if (!$this->hasErrors()) {
-            $user = $this->getUser();
-
-            if (!$user || !$user->validatePassword($this->password)) {
-                $this->addError($attribute, 'Incorrect username or password.');
-            }
+        if($this->validate())
+        {
+            $user = new User();
+            $user->attributes = $this->attributes;
+            return $user->create();
         }
+        exit('Такой email уже существует');
     }
 
     /**
