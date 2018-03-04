@@ -157,8 +157,15 @@ class SiteController extends Controller
      *
      * @return string
      */
-    public function actionAbout()
+    public function actionAbout($id = null, $part = null, $color = null, $idcolor = null)
     {
+        echo '<pre>';
+
+        echo $part . ' => ' . $id . '<br />';
+        echo $color . ' => ' . $idcolor . '<br />';
+
+        die;
+
         $confPath = Yii::getAlias('@app') . '/translations/' . Yii::$app->language . '/interface.php';
         $t = require $confPath;
 

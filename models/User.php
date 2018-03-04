@@ -19,6 +19,7 @@ use yii\web\IdentityInterface;
  */
 class User extends \yii\db\ActiveRecord implements IdentityInterface
 {
+    public $authKey;
     /**
      * @inheritdoc
      */
@@ -65,7 +66,7 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
 
     public static function findIdentity($id)
     {
-        return User::findOne($id);
+        return static::findOne($id);
     }
 
     public static function findIdentityByAccessToken($token, $type = null)
@@ -90,16 +91,18 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
 
     public static function findByEmail($email)
     {
-        return User::find()->where(['email' => $email])->one();
+        return User::find()->where(['email' => $email])->limit(1)->one();
     }
 
     public function validatePassword($password)
     {
-        return ($this->password == $password) ? true : false;
+        //return ($this->password == $password) ? true : false;
+        return (Yii::$app->getSecurity()->validatePassword($password, $this->password)) ? true : false;
     }
 
     public function create()
     {
+        $this->password = Yii::$app->getSecurity()->generatePasswordHash($this->password);
         return $this->save(false);
     }
 }

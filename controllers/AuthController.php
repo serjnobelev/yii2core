@@ -64,12 +64,12 @@ class AuthController extends Controller
     {
         $user = User::findOne(1);
         //Yii::$app->user->login($user);
-        Yii::$app->user->logout();
+        //Yii::$app->user->logout();
 
         if(Yii::$app->user->isGuest){
             echo 'Привет, гость';
         } else {
-            echo 'Привет, ' . $user->name;
+            echo(Yii::$app->user->identity->name);
         }
         die;
         return $this->render('index');

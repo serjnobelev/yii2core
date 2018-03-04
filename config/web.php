@@ -30,6 +30,9 @@ $config = [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
+        'authManager’' => [
+            'class' => 'yii\rbac\PhpManager',
+        ],
         /*
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
@@ -65,6 +68,9 @@ $config = [
                 'action' => yii\web\UrlNormalizer::ACTION_REDIRECT_PERMANENT,
             ],
             'rules' => [
+                'about/<part:(phone|tablet)>/<id:\d+>/<color:(red|black)>/<idcolor:\d+>' => 'site/about',
+                'about/<part:(phone|tablet)>/<id:\d+>' => 'site/about',
+                'about' => 'site/about'
             ]
         ],
 
