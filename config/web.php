@@ -4,7 +4,7 @@ $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
 
 $config = [
-    'id' => 'basic',
+    'id' => 'yiiBaseApp',
     'language' => 'ru',
     'sourceLanguage' => 'ru',
     'basePath' => dirname(__DIR__),

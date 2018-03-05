@@ -31,6 +31,7 @@ class UserForm extends Model
     {
         return [
             // username and password are both required
+            //[['name', 'email', 'about'], 'filter' => 'trim', 'skipOnArray' => true],
             [['name', 'email', 'about'], 'trim'],
             ['name', 'string'],
             ['name', 'required', 'message' => Yii::t('userformmsg', 'Поле имя не может быть пустым')],
@@ -40,7 +41,7 @@ class UserForm extends Model
             [['about'], 'default', 'value' => 'Пусто'],
             // rememberMe must be a boolean value
             ['isAdmin', 'boolean'],
-            ['photo', 'image']
+            //['photo', 'image']
         ];
     }
 

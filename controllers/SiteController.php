@@ -7,6 +7,7 @@ use app\models\Category;
 use app\models\User;
 use Yii;
 use yii\filters\AccessControl;
+use yii\helpers\Html;
 use yii\validators\EmailValidator;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -159,15 +160,14 @@ class SiteController extends Controller
      */
     public function actionAbout($id = null, $part = null, $color = null, $idcolor = null)
     {
-        echo '<pre>';
-
-        echo $part . ' => ' . $id . '<br />';
-        echo $color . ' => ' . $idcolor . '<br />';
-
+        //DAO
+        /*$sql = 'SELECT count(*) FROM user';
+        $data = Yii::$app->db->createCommand($sql)->queryScalar();
+        var_dump($data);*/
         die;
 
-        $confPath = Yii::getAlias('@app') . '/translations/' . Yii::$app->language . '/interface.php';
-        $t = require $confPath;
+        //$confPath = Yii::getAlias('@app') . '/translations/' . Yii::$app->language . '/interface.php';
+        //$t = require $confPath;
 
         //$count = Article::find()->with('category')->all();
         
