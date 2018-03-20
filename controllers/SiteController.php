@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use app\components\Foo;
 use app\models\Category;
+use app\models\Pluses;
 use app\models\User;
 use Yii;
 use yii\filters\AccessControl;
@@ -160,6 +161,11 @@ class SiteController extends Controller
      */
     public function actionAbout($id = null, $part = null, $color = null, $idcolor = null)
     {
+
+        $pluses = Pluses::find()->all();
+        echo '<pre>';
+        var_dump($pluses); die;
+
         //DAO
         /*$sql = 'SELECT count(*) FROM user';
         $data = Yii::$app->db->createCommand($sql)->queryScalar();
