@@ -31,7 +31,7 @@ class Pluses extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['title_ua', 'text_ua', 'title_ru', 'text_ru', 'image'], 'required'],
+            [['title_ua', 'text_ua', 'title_ru', 'text_ru', 'image', 'number'], 'required'],
             [['number'], 'integer'],
             [['title_ua', 'title_ru', 'image'], 'string', 'max' => 128],
             [['text_ua', 'text_ru'], 'string', 'max' => 512],

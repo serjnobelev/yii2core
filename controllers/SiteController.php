@@ -164,7 +164,7 @@ class SiteController extends Controller
 
         $pluses = Pluses::find()->all();
         echo '<pre>';
-        var_dump($pluses); die;
+        var_dump(Yii::getVersion()); die;
 
         //DAO
         /*$sql = 'SELECT count(*) FROM user';

@@ -12,6 +12,11 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
+    <?= $form->field($model, 'number')->dropDownList(
+        [1 => '1', 2 => '2', 3 => '3', 4 => '4', 5 => '5'],
+        ['prompt' => 'Номер позиции']
+    ) ?>
+
     <?= $form->field($model, 'title_ua')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'text_ua')->textInput(['maxlength' => true]) ?>
@@ -21,8 +26,6 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'text_ru')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'image')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'number')->textInput() ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
