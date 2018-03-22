@@ -20,16 +20,17 @@ class ImageUpload extends Model
     public function rules()
     {
         return [
-            [['image'], 'required'],
             [['image'], 'file', 'extensions' => 'jpg, png']
         ];
     }
 
-    public function uploadFile(UploadedFile $file, $oldImageName)
+    public function uploadFile(UploadedFile $file, $path, $oldImageName = null)
     {
         $this->image = $file->name;
+        $this->imagePath = $path;
         if($this->validate()){
-            $this->deleteImage($oldImageName);
+            if($oldImageName) $this->deleteImage($oldImageName);
+
             $imageName = time() . '_' . $this->image;
             $file->saveAs($this->imageDir() . $imageName);
             return $imageName;
@@ -45,6 +46,6 @@ class ImageUpload extends Model
 
     public function imageDir()
     {
-        return Yii::getAlias('@web') . $this->imagePath . DIRECTORY_SEPARATOR;
+        return Yii::getAlias('@web') . $this->imagePath;
     }
 }

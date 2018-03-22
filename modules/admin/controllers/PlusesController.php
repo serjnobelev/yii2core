@@ -8,6 +8,8 @@ use app\models\PlusesSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
+use app\models\ImageUpload;
 
 /**
  * PlusesController implements the CRUD actions for Pluses model.
@@ -65,13 +67,21 @@ class PlusesController extends Controller
     public function actionCreate()
     {
         $model = new Pluses();
+        $image = new ImageUpload();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if(Yii::$app->request->isPost) {
+            $file = UploadedFile::getInstance($image, 'image');
+
+            if($file) $model->image = $image->uploadFile($file, $model->getImagePath());
+
+            if ($model->load(Yii::$app->request->post()) && $model->save()) {
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
         }
 
         return $this->render('create', [
             'model' => $model,
+            'image' => $image,
         ]);
     }
 
@@ -85,13 +95,20 @@ class PlusesController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        $image = new ImageUpload();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if(Yii::$app->request->isPost) {
+            $file = UploadedFile::getInstance($image, 'image');
+            if($file) $model->image = $image->uploadFile($file, $model->getImagePath());
+
+            if ($model->load(Yii::$app->request->post()) && $model->save()) {
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
         }
 
         return $this->render('update', [
             'model' => $model,
+            'image' => $image,
         ]);
     }
 

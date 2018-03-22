@@ -55,7 +55,7 @@ $config = [
 
         'urlManager' => [
             'class' => 'codemix\localeurls\UrlManager',
-            'languages' => ['ru', 'en'],
+            'languages' => ['ru', 'ua'],
             'enableDefaultLanguageUrlCode' => false,
             'enableLanguagePersistence' => false,
             'enableLanguageDetection' => false,

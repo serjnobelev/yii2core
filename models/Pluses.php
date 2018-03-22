@@ -31,7 +31,7 @@ class Pluses extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['title_ua', 'text_ua', 'title_ru', 'text_ru', 'image', 'number'], 'required'],
+            [['title_ua', 'text_ua', 'title_ru', 'text_ru', 'number'], 'required'],
             [['number'], 'integer'],
             [['title_ua', 'title_ru', 'image'], 'string', 'max' => 128],
             [['text_ua', 'text_ru'], 'string', 'max' => 512],
@@ -52,5 +52,15 @@ class Pluses extends \yii\db\ActiveRecord
             'image' => 'Image',
             'number' => 'Number',
         ];
+    }
+
+    public function getImage()
+    {
+        return ($this->image) ? DIRECTORY_SEPARATOR . $this->getImagePath() . $this->image : null;
+    }
+    
+    public function getImagePath()
+    {
+        return Yii::$app->params['plusesImgPath'];
     }
 }
