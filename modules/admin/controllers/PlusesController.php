@@ -70,10 +70,7 @@ class PlusesController extends Controller
         $image = new ImageUpload();
 
         if(Yii::$app->request->isPost) {
-            $file = UploadedFile::getInstance($image, 'image');
-
-            if($file) $model->image = $image->uploadFile($file, $model->getImagePath());
-
+            $this->setImage($model, $image);
             if ($model->load(Yii::$app->request->post()) && $model->save()) {
                 return $this->redirect(['view', 'id' => $model->id]);
             }
@@ -98,9 +95,7 @@ class PlusesController extends Controller
         $image = new ImageUpload();
 
         if(Yii::$app->request->isPost) {
-            $file = UploadedFile::getInstance($image, 'image');
-            if($file) $model->image = $image->uploadFile($file, $model->getImagePath());
-
+            $this->setImage($model, $image);
             if ($model->load(Yii::$app->request->post()) && $model->save()) {
                 return $this->redirect(['view', 'id' => $model->id]);
             }
@@ -140,5 +135,11 @@ class PlusesController extends Controller
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
+    }
+
+    protected function setImage($model, $image)
+    {
+        $file = UploadedFile::getInstance($image, 'image');
+        if($file) $model->image = $image->uploadFile($file, $model->getImagePath());
     }
 }
