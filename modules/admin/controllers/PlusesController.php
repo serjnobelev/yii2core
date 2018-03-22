@@ -94,11 +94,8 @@ class PlusesController extends Controller
         $model = $this->findModel($id);
         $image = new ImageUpload();
 
-        if(Yii::$app->request->isPost) {
-            $this->setImage($model, $image);
-            if ($model->load(Yii::$app->request->post()) && $model->save()) {
-                return $this->redirect(['view', 'id' => $model->id]);
-            }
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['view', 'id' => $model->id]);
         }
 
         return $this->render('update', [
