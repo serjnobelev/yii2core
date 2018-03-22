@@ -34,7 +34,7 @@ class m180320_072710_create_table_pluses extends Migration
             'text_ua' => $this->string(512)->notNull(),
             'title_ru' => $this->string(128)->notNull(),
             'text_ru' => $this->string(512)->notNull(),
-            'image' => $this->string(128)->notNull(),
+            'image' => $this->string(128),
             'number' => $this->smallInteger(2),
         ]);
 

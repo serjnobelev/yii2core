@@ -33,7 +33,13 @@ $this->params['breadcrumbs'][] = $this->title;
             'text_ua',
             'title_ru',
             'text_ru',
-            'image',
+            [
+                'format' => 'html',
+                'label' => 'Image',
+                'value' => function($data){
+                    return Html::img($data->getImage(), ['width' => 200]);
+                }
+            ],
             'number',
         ],
     ]) ?>

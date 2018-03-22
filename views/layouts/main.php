@@ -37,9 +37,9 @@ AppAsset::register($this);
     ]);
 
     if(\Yii::$app->language == 'ru'):
-        echo Html::a('English', array_merge(
+        echo Html::a('украинский', array_merge(
             \Yii::$app->request->get(),
-            [\Yii::$app->controller->route, 'language' => 'en']
+            [\Yii::$app->controller->route, 'language' => 'ua']
         ));
     else:
         echo Html::a('Русский', array_merge(
