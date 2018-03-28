@@ -39,6 +39,7 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             ['label' => '10 преимуществ', 'url' => ['/admin/pluses']],
+            ['label' => 'Документы', 'url' => ['/admin/documents']],
             ['label' => 'Article', 'url' => ['/admin/article']],
             ['label' => 'Category', 'url' => ['/admin/category']],
             ['label' => 'Tag', 'url' => ['/admin/tag']],

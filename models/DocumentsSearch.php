@@ -5,12 +5,12 @@ namespace app\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\Pluses;
+use app\models\Documents;
 
 /**
- * PlusesSearch represents the model behind the search form of `app\models\Pluses`.
+ * DocumentsSearch represents the model behind the search form of `app\models\Documents`.
  */
-class PlusesSearch extends Pluses
+class DocumentsSearch extends Documents
 {
     /**
      * @inheritdoc
@@ -19,7 +19,7 @@ class PlusesSearch extends Pluses
     {
         return [
             [['id', 'number'], 'integer'],
-            [['title_ua', 'text_ua', 'title_ru', 'text_ru', 'image'], 'safe'],
+            [['title_ua', 'title_ru', 'image'], 'safe'],
         ];
     }
 
@@ -41,7 +41,7 @@ class PlusesSearch extends Pluses
      */
     public function search($params)
     {
-        $query = Pluses::find();
+        $query = Documents::find();
 
         // add conditions that should always apply here
 
@@ -64,9 +64,7 @@ class PlusesSearch extends Pluses
         ]);
 
         $query->andFilterWhere(['like', 'title_ua', $this->title_ua])
-            ->andFilterWhere(['like', 'text_ua', $this->text_ua])
             ->andFilterWhere(['like', 'title_ru', $this->title_ru])
-            ->andFilterWhere(['like', 'text_ru', $this->text_ru])
             ->andFilterWhere(['like', 'image', $this->image]);
 
         return $dataProvider;

@@ -4,13 +4,13 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Pluses */
+/* @var $model app\models\Documents */
 
 $this->title = $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Pluses', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Documents', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="pluses-view">
+<div class="documents-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -30,16 +30,8 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'id',
             'title_ua',
-            'text_ua',
             'title_ru',
-            'text_ru',
-            [
-                'format' => 'html',
-                'label' => 'Image',
-                'value' => function($data){
-                    return Html::img($data->getImage(), ['width' => 200]);
-                }
-            ],
+            'image',
             'number',
         ],
     ]) ?>

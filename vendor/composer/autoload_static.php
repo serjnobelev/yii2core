@@ -15,63 +15,17 @@ class ComposerStaticInit4b195868a0e5a25d05c0e031a48eec86
         '180092cfc969a12e06f2132a203a3184' => __DIR__ . '/..' . '/codeception/verify/src/Codeception/function.php',
     );
 
-    public static $prefixLengthsPsr4 = array (
-        'y' => 
-        array (
-            'yii\\swiftmailer\\' => 16,
-            'yii\\gii\\' => 8,
-            'yii\\faker\\' => 10,
-            'yii\\debug\\' => 10,
-            'yii\\composer\\' => 13,
-            'yii\\bootstrap\\' => 14,
-            'yii\\' => 4,
-        ),
-        'p' => 
-        array (
-            'phpDocumentor\\Reflection\\' => 25,
-        ),
-        'c' => 
-        array (
-            'codemix\\localeurls\\' => 19,
-            'cebe\\markdown\\' => 14,
-        ),
-        'W' => 
-        array (
-            'Webmozart\\Assert\\' => 17,
-        ),
-        'S' => 
-        array (
-            'Symfony\\Polyfill\\Mbstring\\' => 26,
-            'Symfony\\Component\\Yaml\\' => 23,
-            'Symfony\\Component\\Finder\\' => 25,
-            'Symfony\\Component\\EventDispatcher\\' => 34,
-            'Symfony\\Component\\DomCrawler\\' => 29,
-            'Symfony\\Component\\CssSelector\\' => 30,
-            'Symfony\\Component\\Console\\' => 26,
-            'Symfony\\Component\\BrowserKit\\' => 29,
-        ),
-        'P' => 
-        array (
-            'Psr\\Http\\Message\\' => 17,
-        ),
-        'G' => 
-        array (
-            'GuzzleHttp\\Psr7\\' => 16,
-        ),
-        'F' => 
-        array (
-            'Faker\\' => 6,
-        ),
-        'D' => 
-        array (
-            'Doctrine\\Instantiator\\' => 22,
-            'DeepCopy\\' => 9,
-        ),
-        'C' => 
-        array (
-            'Codeception\\Extension\\' => 22,
-            'Codeception\\' => 12,
-        ),
+    public static $firstCharsPsr4 = array (
+        'y' => true,
+        'p' => true,
+        'c' => true,
+        'W' => true,
+        'S' => true,
+        'P' => true,
+        'G' => true,
+        'F' => true,
+        'D' => true,
+        'C' => true,
     );
 
     public static $prefixDirsPsr4 = array (
@@ -770,7 +724,7 @@ class ComposerStaticInit4b195868a0e5a25d05c0e031a48eec86
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit4b195868a0e5a25d05c0e031a48eec86::$prefixLengthsPsr4;
+            $loader->firstCharsPsr4 = ComposerStaticInit4b195868a0e5a25d05c0e031a48eec86::$firstCharsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit4b195868a0e5a25d05c0e031a48eec86::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit4b195868a0e5a25d05c0e031a48eec86::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit4b195868a0e5a25d05c0e031a48eec86::$classMap;

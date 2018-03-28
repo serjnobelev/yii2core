@@ -28,7 +28,7 @@ class m180328_141751_create_table_documents extends Migration
     // Use up()/down() to run migration code without a transaction.
     public function up()
     {
-        $this->createTable('pluses', [
+        $this->createTable('documents', [
             'id' => $this->primaryKey(3),
             'title_ua' => $this->string(256)->notNull(),
             'title_ru' => $this->string(256)->notNull(),

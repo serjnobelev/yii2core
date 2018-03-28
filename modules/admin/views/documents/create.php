@@ -4,19 +4,18 @@ use yii\helpers\Html;
 
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Pluses */
+/* @var $model app\models\Documents */
 
-$this->title = 'Create Pluses';
-$this->params['breadcrumbs'][] = ['label' => 'Pluses', 'url' => ['index']];
+$this->title = 'Create Documents';
+$this->params['breadcrumbs'][] = ['label' => 'Documents', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="pluses-create">
+<div class="documents-create">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
     <?= $this->render('_form', [
         'model' => $model,
-        'image' => $image,
     ]) ?>
 
 </div>

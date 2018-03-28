@@ -3,18 +3,16 @@
 namespace app\modules\admin\controllers;
 
 use Yii;
-use app\models\Pluses;
-use app\models\PlusesSearch;
+use app\models\Documents;
+use app\models\DocumentsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use yii\web\UploadedFile;
-use app\models\ImageUpload;
 
 /**
- * PlusesController implements the CRUD actions for Pluses model.
+ * DocumentsController implements the CRUD actions for Documents model.
  */
-class PlusesController extends Controller
+class DocumentsController extends Controller
 {
     /**
      * @inheritdoc
@@ -32,12 +30,12 @@ class PlusesController extends Controller
     }
 
     /**
-     * Lists all Pluses models.
+     * Lists all Documents models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new PlusesSearch();
+        $searchModel = new DocumentsSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -47,7 +45,7 @@ class PlusesController extends Controller
     }
 
     /**
-     * Displays a single Pluses model.
+     * Displays a single Documents model.
      * @param integer $id
      * @return mixed
      * @throws NotFoundHttpException if the model cannot be found
@@ -60,30 +58,25 @@ class PlusesController extends Controller
     }
 
     /**
-     * Creates a new Pluses model.
+     * Creates a new Documents model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new Pluses();
-        $image = new ImageUpload();
+        $model = new Documents();
 
-        if(Yii::$app->request->isPost) {
-            $this->setImage($model, $image);
-            if ($model->load(Yii::$app->request->post()) && $model->save()) {
-                return $this->redirect(['view', 'id' => $model->id]);
-            }
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['view', 'id' => $model->id]);
         }
 
         return $this->render('create', [
             'model' => $model,
-            'image' => $image,
         ]);
     }
 
     /**
-     * Updates an existing Pluses model.
+     * Updates an existing Documents model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -92,23 +85,18 @@ class PlusesController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
-        $image = new ImageUpload();
 
-        if(Yii::$app->request->isPost) {
-            $this->setImage($model, $image);
-            if ($model->load(Yii::$app->request->post()) && $model->save()) {
-                return $this->redirect(['view', 'id' => $model->id]);
-            }
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['view', 'id' => $model->id]);
         }
 
         return $this->render('update', [
             'model' => $model,
-            'image' => $image,
         ]);
     }
 
     /**
-     * Deletes an existing Pluses model.
+     * Deletes an existing Documents model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -122,24 +110,18 @@ class PlusesController extends Controller
     }
 
     /**
-     * Finds the Pluses model based on its primary key value.
+     * Finds the Documents model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return Pluses the loaded model
+     * @return Documents the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = Pluses::findOne($id)) !== null) {
+        if (($model = Documents::findOne($id)) !== null) {
             return $model;
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
-    }
-
-    protected function setImage($model, $image)
-    {
-        $file = UploadedFile::getInstance($image, 'image');
-        if($file) $model->image = $image->uploadFile($file, $model->getImagePath());
     }
 }
