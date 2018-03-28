@@ -159,12 +159,18 @@ class SiteController extends Controller
      *
      * @return string
      */
+    public function actionDownload()
+    {
+        //if(file_exists(__DIR__ . '/../web/img/pluses/1521726670_main_page_slider_01.jpg')) echo 'true'; die;
+        Yii::$app->response->sendFile(__DIR__ . '/../web/img/pluses/1521726670_main_page_slider_01.jpg');
+        Yii::$app->response->send();
+        die;
+    }
+
     public function actionAbout($id = null, $part = null, $color = null, $idcolor = null)
     {
 
-        $pluses = Pluses::find()->all();
-        echo '<pre>';
-        var_dump(Yii::getVersion()); die;
+        echo '<a href="/site/download">DOWNLOAD FILE</a>';
 
         //DAO
         /*$sql = 'SELECT count(*) FROM user';
