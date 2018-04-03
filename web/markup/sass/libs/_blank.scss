@@ -1,0 +1,27 @@
+@mixin font-face($fontName) {
+  font-family: $fontName;
+  src: url("../fonts/"+$fontName+"/"+$fontName+".eot");
+  src: url("../fonts/"+$fontName+"/"+$fontName+".eot") format('embedded-opentype'),
+  url("../fonts/"+$fontName+"/"+$fontName+".woff") format('woff'),
+  url("../fonts/"+$fontName+"/"+$fontName+".woff2") format('woff2'),
+  url("../fonts/"+$fontName+"/"+$fontName+".ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+%aR {
+  font-family: "AvenirRegular", sans-serif;
+}
+%aM {
+  font-family: "AvenirMedium", sans-serif;
+}
+%aD {
+  font-family: "AvenirDemi", sans-serif;
+}
+%mB {
+  font-family: "MinionBold", sans-serif;
+}
+
+
+
+

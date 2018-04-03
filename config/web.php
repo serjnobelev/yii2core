@@ -68,15 +68,21 @@ $config = [
                 'action' => yii\web\UrlNormalizer::ACTION_REDIRECT_PERMANENT,
             ],
             'rules' => [
+                'documents' => 'site/documents',
                 'about/<part:(phone|tablet)>/<id:\d+>/<color:(red|black)>/<idcolor:\d+>' => 'site/about',
                 'about/<part:(phone|tablet)>/<id:\d+>' => 'site/about',
-                'about' => 'site/about'
+                'about' => 'site/about',
             ]
         ],
 
         'i18n' => [
             'translations' => [
                 'app' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'basePath' => '@app/i18n',
+                    'sourceLanguage' => 'ru',
+                ],
+                'menu' => [
                     'class' => 'yii\i18n\PhpMessageSource',
                     'basePath' => '@app/i18n',
                     'sourceLanguage' => 'ru',

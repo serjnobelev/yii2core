@@ -1,0 +1,67 @@
+@import "libs/_elements";
+@import "libs/_blank.scss";
+// @import "libs/_sprite";
+// @import "libs/sprite";
+/*
+================================================================================
+|                                     reset                                     |
+================================================================================
+*/
+@import "libs/_reset";
+/*
+================================================================================
+|                                     Fonts                                    |
+================================================================================
+*/
+@import "libs/_fonts";
+
+/*
+================================================================================
+|                                     Start rools                              |
+================================================================================
+*/
+
+.clearfix:after {
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+body {
+	margin: 0 auto;
+	-webkit-tap-highlight-color: transparent;
+	//background-image: url("/img/main/slide-1.png");
+	//background-size: cover;
+}
+
+html,
+body {
+	position: relative;
+	min-height: 100%;
+}
+
+.sk {
+	//display: none;
+	visibility: hidden;
+	opacity: 0;
+	transition: opacity .2s ease-in, visibility .2s ease-in;
+	
+	&.show {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+.bingc-active, #bingc-phone-button {
+	display: none!important;
+}
+
+
+
+@import "content/templates/header";
+
+@import "content/pages/main/main";
+
+@import "content/templates/footer";

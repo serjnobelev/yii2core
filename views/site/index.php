@@ -1,53 +1,129 @@
-<?php
-
-/* @var $this yii\web\View */
-
-$this->title = 'My Yii Application';
-?>
-<div class="site-index">
-
-    <div class="jumbotron">
-        <h1>Congratulations!</h1>
-
-        <p class="lead">You have successfully created your Yii-powered application.</p>
-
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
+<section class="main">
+    <div class="bigNumbers">
+        <div class="text-wrap"><?= Yii::t('app', '10 наших') ?><span><?= Yii::t('app', 'преимуществ') ?></span></div>
+        <div class="big_n">
+            <svg class="icon-svg-slide_n-1">
+                <use xlink:href="/img/sprite.svg#digit__1" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            </svg>
+        </div>
+        <div class="big_n">
+            <svg class="icon-svg-slide_n-1">
+                <use xlink:href="/img/sprite.svg#digit__2" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            </svg>
+        </div>
+        <div class="big_n">
+            <svg class="icon-svg-slide_n-1">
+                <use xlink:href="/img/sprite.svg#digit__3" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            </svg>
+        </div>
+        <div class="big_n">
+            <svg class="icon-svg-slide_n-1">
+                <use xlink:href="/img/sprite.svg#digit__4" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            </svg>
+        </div>
+        <div class="big_n">
+            <svg class="icon-svg-slide_n-1">
+                <use xlink:href="/img/sprite.svg#digit__5" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            </svg>
+        </div>
+        <div class="big_n">
+            <svg class="icon-svg-slide_n-1">
+                <use xlink:href="/img/sprite.svg#digit__6" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            </svg>
+        </div>
+        <div class="big_n">
+            <svg class="icon-svg-slide_n-1">
+                <use xlink:href="/img/sprite.svg#digit__7" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            </svg>
+        </div>
+        <div class="big_n">
+            <svg class="icon-svg-slide_n-1">
+                <use xlink:href="/img/sprite.svg#digit__8" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            </svg>
+        </div>
+        <div class="big_n">
+            <svg class="icon-svg-slide_n-1">
+                <use xlink:href="/img/sprite.svg#digit__9" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            </svg>
+        </div>
+        <div class="big_n">
+            <svg class="icon-svg-slide_n-1">
+                <use xlink:href="/img/sprite.svg#digit__10" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+            </svg>
+        </div>
     </div>
-
-    <div class="body-content">
-
-        <div class="row">
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/doc/">Yii Documentation &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/forum/">Yii Forum &raquo;</a></p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Heading</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                    dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                    fugiat nulla pariatur.</p>
-
-                <p><a class="btn btn-default" href="http://www.yiiframework.com/extensions/">Yii Extensions &raquo;</a></p>
+    <div id="fullpage">
+        <div class="section">
+            <img class="slide_img" src="/img/main/slides/slider_01.jpg" alt="slide img">
+            <div class="slide_content">
+                <div class="init_slide">
+                    <svg class="icon-svg-logo">
+                        <use xlink:href="/img/sprite.svg#logo" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                    </svg>
+                    <div class="init_slideBtns">
+                        <a href="javascript:void(0);" class="init_btn">
+                            <div class="init_slide-btnImg">
+                                <svg class="icon-svg-slide-ico-1">
+                                    <use xlink:href="/img/sprite.svg#init-slide-ico-1" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                </svg>
+                            </div>
+                            <span>выбрать<br>квартиру</span>
+                        </a>
+                        <a href="javascript:void(0);" class="init_btn">
+                            <div class="init_slide-btnImg">
+                                <svg class="icon-svg-slide-ico-2">
+                                    <use xlink:href="/img/sprite.svg#init-slide-ico-2" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                </svg>
+                            </div>
+                            <span>условия<br>покупки</span>
+                        </a>
+                        <a href="javascript:void(0);" class="init_btn">
+                            <div class="init_slide-btnImg">
+                                <svg class="icon-svg-slide-ico-3">
+                                    <use xlink:href="/img/sprite.svg#init-slide-ico-3" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                </svg>
+                            </div>
+                            <span>веб<br>камера</span>
+                        </a>
+                        <a href="javascript:void(0);" class="init_btn">
+                            <div class="init_slide-btnImg">
+                                <svg class="icon-svg-slide-ico-4">
+                                    <use xlink:href="/img/sprite.svg#init-slide-ico-4" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+                                </svg>
+                            </div>
+                            <span>фото<br>галлерея</span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
 
+        <?php foreach ($pluses as $plus): ?>
+            <div class="section">
+                <img class="slide_img" src="/img/main/slides/<?= $plus['image'] ?>" alt="slide img">
+                <div class="slide_content">
+                    <div class="simlpe_slide">
+                        <div class="adv_wrap">
+                            <div class="adv_exp">
+                                <h2 class="adv_exp-head"><?= $plus['title'] ?></h2>
+                                <div class="adv_exp-text"><?= $plus['text'] ?></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php endforeach; ?>
+
     </div>
-</div>
+    <div class="animArrGroup">
+        <svg class="icon-svg-slide_arr">
+            <use xlink:href="/img/sprite.svg#slide_arr" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+        </svg>
+        <svg class="icon-svg-slide_arr">
+            <use xlink:href="/img/sprite.svg#slide_arr" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+        </svg>
+        <svg class="icon-svg-slide_arr">
+            <use xlink:href="/img/sprite.svg#slide_arr" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
+        </svg>
+    </div>
+</section>

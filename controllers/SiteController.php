@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use app\components\Foo;
 use app\models\Category;
+use app\models\Documents;
 use app\models\Pluses;
 use app\models\User;
 use Yii;
@@ -71,7 +72,26 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $pluses = Pluses::getPluses();
+        return $this->render('index', ['pluses' => $pluses]);
+    }
+
+    public function actionDocuments()
+    {
+        $docs = Documents::getDocs();
+        return $this->render('documents', ['docs' => $docs]);
+    }
+
+    public function actionDownloadDoc($image)
+    {
+        $obj = __DIR__ . '/../web' . Yii::$app->params['docsImgPath'] . $image;
+        if(file_exists($obj)) {
+            Yii::$app->response->sendFile($obj);
+            Yii::$app->response->send();
+        } else {
+            echo false;
+        }
+        die;
     }
 
     /**
@@ -152,19 +172,6 @@ class SiteController extends Controller
             'model' => $model,
             'data' => $data
         ]);
-    }
-
-    /**
-     * Displays about page.
-     *
-     * @return string
-     */
-    public function actionDownload()
-    {
-        //if(file_exists(__DIR__ . '/../web/img/pluses/1521726670_main_page_slider_01.jpg')) echo 'true'; die;
-        Yii::$app->response->sendFile(__DIR__ . '/../web/img/pluses/1521726670_main_page_slider_01.jpg');
-        Yii::$app->response->send();
-        die;
     }
 
     public function actionAbout($id = null, $part = null, $color = null, $idcolor = null)

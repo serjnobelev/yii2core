@@ -54,11 +54,18 @@ class Pluses extends \yii\db\ActiveRecord
         ];
     }
 
+    public static function getPluses()
+    {
+        $sql = 'SELECT title_' . Yii::$app->language . ' AS title, text_' . Yii::$app->language . ' AS text, image FROM ' . self::tableName() . ' ORDER BY number ASC';
+        $data = Yii::$app->db->createCommand($sql)->queryAll();
+        return $data;
+    }
+
     public function getImage()
     {
         return ($this->image) ? DIRECTORY_SEPARATOR . $this->getImagePath() . $this->image : null;
     }
-    
+
     public function getImagePath()
     {
         return Yii::$app->params['plusesImgPath'];

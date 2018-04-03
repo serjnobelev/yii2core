@@ -13,7 +13,7 @@ use yii\widgets\ActiveForm;
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'number')->dropDownList(
-        [1 => '1', 2 => '2', 3 => '3', 4 => '4', 5 => '5'],
+        [1 => '1', 2 => '2', 3 => '3', 4 => '4', 5 => '5', 6 => '6', 7 => '7', 8 => '8', 9 => '9', 10 => '10'],
         ['prompt' => 'Номер позиции']
     ) ?>
 

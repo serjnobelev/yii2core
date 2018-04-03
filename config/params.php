@@ -2,5 +2,6 @@
 
 return [
     'adminEmail' => 'admin@example.com',
-    'plusesImgPath' => 'img/pluses/',
+    'plusesImgPath' => '/img/pluses/',
+    'docsImgPath' => '/img/documents/',
 ];
