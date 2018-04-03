@@ -15,6 +15,9 @@ Thumbs.db
 # db config
 /comfig/db.php
 
+# runtime dir
+/runtime
+
 # composer vendor dir
 #/vendor
 
