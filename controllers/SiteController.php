@@ -5,6 +5,7 @@ namespace app\controllers;
 use app\components\Foo;
 use app\models\Category;
 use app\models\Documents;
+use app\models\Phones;
 use app\models\Pluses;
 use app\models\User;
 use Yii;
@@ -92,6 +93,13 @@ class SiteController extends Controller
             echo false;
         }
         die;
+    }
+
+    public function actionPhoneNumbers()
+    {
+        $phones = Phones::find()->all();
+        vardump($phones); die;
+        return $this->render('documents', ['docs' => $docs]);
     }
 
     /**

@@ -69,6 +69,7 @@ $config = [
             ],
             'rules' => [
                 'documents' => 'site/documents',
+                'phone-numbers' => 'site/phone-numbers',
                 'about/<part:(phone|tablet)>/<id:\d+>/<color:(red|black)>/<idcolor:\d+>' => 'site/about',
                 'about/<part:(phone|tablet)>/<id:\d+>' => 'site/about',
                 'about' => 'site/about',
