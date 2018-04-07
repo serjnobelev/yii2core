@@ -1,3 +1,8 @@
+<?php
+    $this->title = 'Главная';
+    \Yii::$app->view->params['pageClass'] = 'page_main';
+?>
+
 <section class="main">
     <div class="bigNumbers">
         <div class="text-wrap"><?= Yii::t('app', '10 наших') ?><span><?= Yii::t('app', 'преимуществ') ?></span></div>

@@ -8,12 +8,13 @@ use Yii;
  * This is the model class for table "pagetexts".
  *
  * @property int $id
+ * @property string $page
  * @property string $head_ua
  * @property string $head_ru
  * @property string $subhead_ua
  * @property string $subhead_ru
  * @property string $descr_ua
- * @property string $sdescr_ru
+ * @property string $descr_ru
  */
 class Pagetexts extends \yii\db\ActiveRecord
 {
@@ -31,7 +32,8 @@ class Pagetexts extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['descr_ua', 'sdescr_ru'], 'string'],
+            [['descr_ua', 'descr_ru'], 'string'],
+            [['page'], 'string', 'max' => 32],
             [['head_ua', 'head_ru'], 'string', 'max' => 512],
             [['subhead_ua', 'subhead_ru'], 'string', 'max' => 1024],
         ];
@@ -44,12 +46,20 @@ class Pagetexts extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
+            'page' => 'Page',
             'head_ua' => 'Head Ua',
             'head_ru' => 'Head Ru',
             'subhead_ua' => 'Subhead Ua',
             'subhead_ru' => 'Subhead Ru',
             'descr_ua' => 'Descr Ua',
-            'sdescr_ru' => 'Sdescr Ru',
+            'descr_ru' => 'Descr Ru',
         ];
+    }
+
+    public static function getText($page)
+    {
+        $sql = 'SELECT head_' . Yii::$app->language . ' AS head, subhead_' . Yii::$app->language . ' AS subhead, descr_' . Yii::$app->language . ' AS descr FROM ' . self::tableName() . ' WHERE page=:page';
+        $data = Yii::$app->db->createCommand($sql)->bindValue(':page', $page)->queryOne();
+        return $data;
     }
 }

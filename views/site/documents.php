@@ -1,3 +1,7 @@
+<?php
+    $this->title = 'Документы';
+    \Yii::$app->view->params['pageClass'] = 'page_documents';
+?>
 <section class="documents">
     <div class="page_nav">
         <div class="page_nav-wrap">

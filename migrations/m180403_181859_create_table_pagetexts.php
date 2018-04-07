@@ -28,13 +28,20 @@ class m180403_181859_create_table_pagetexts extends Migration
     {
         $this->createTable('pagetexts', [
             'id' => $this->primaryKey(3),
+            'page' => $this->string(32),
             'head_ua' => $this->string(512),
             'head_ru' => $this->string(512),
             'subhead_ua' => $this->string(1024),
             'subhead_ru' => $this->string(1024),
             'descr_ua' => $this->text(),
-            'sdescr_ru' => $this->text()
+            'descr_ru' => $this->text()
         ]);
+
+        $this->createIndex(
+            'idx-pagetexts-page',
+            'pagetexts',
+            'page'
+        );
     }
 
     public function down()

@@ -12,6 +12,8 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
+    <?= $form->field($model, 'page')->textInput(['maxlength' => true]) ?>
+
     <?= $form->field($model, 'head_ua')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'head_ru')->textInput(['maxlength' => true]) ?>
@@ -22,7 +24,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'descr_ua')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'sdescr_ru')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'descr_ru')->textarea(['rows' => 6]) ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

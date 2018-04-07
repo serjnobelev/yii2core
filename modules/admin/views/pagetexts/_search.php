@@ -17,17 +17,19 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'id') ?>
 
+    <?= $form->field($model, 'page') ?>
+
     <?= $form->field($model, 'head_ua') ?>
 
     <?= $form->field($model, 'head_ru') ?>
 
     <?= $form->field($model, 'subhead_ua') ?>
 
-    <?= $form->field($model, 'subhead_ru') ?>
+    <?php // echo $form->field($model, 'subhead_ru') ?>
 
     <?php // echo $form->field($model, 'descr_ua') ?>
 
-    <?php // echo $form->field($model, 'sdescr_ru') ?>
+    <?php // echo $form->field($model, 'descr_ru') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

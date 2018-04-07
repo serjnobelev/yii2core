@@ -33,6 +33,14 @@ $config = [
         'authManager’' => [
             'class' => 'yii\rbac\PhpManager',
         ],
+        'formatter' => [
+            'class' => 'yii\i18n\Formatter',
+            'datetimeFormat' => 'dd-MM-yyyy, HH:mm',
+            'dateFormat' => 'dd-MM-yyyy',
+            'decimalSeparator' => ',',
+            'thousandSeparator' => ' ',
+            'currencyCode' => 'UAH',
+        ],
         /*
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
@@ -68,8 +76,16 @@ $config = [
                 'action' => yii\web\UrlNormalizer::ACTION_REDIRECT_PERMANENT,
             ],
             'rules' => [
+                '/' => 'site/index',
                 'documents' => 'site/documents',
                 'phone-numbers' => 'site/phone-numbers',
+                'rates/<addr:\w+>' => 'site/rates',
+                'rates' => 'site/rates',
+                'contacts' => 'site/contacts',
+                'finished-build' => 'site/finished-build',
+                'in-build' => 'site/in-build',
+                'news/<title:(\w+\-)+\d+>' => 'site/news',
+                'news' => 'site/news',
                 'about/<part:(phone|tablet)>/<id:\d+>/<color:(red|black)>/<idcolor:\d+>' => 'site/about',
                 'about/<part:(phone|tablet)>/<id:\d+>' => 'site/about',
                 'about' => 'site/about',

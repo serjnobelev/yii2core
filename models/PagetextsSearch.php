@@ -19,7 +19,7 @@ class PagetextsSearch extends Pagetexts
     {
         return [
             [['id'], 'integer'],
-            [['head_ua', 'head_ru', 'subhead_ua', 'subhead_ru', 'descr_ua', 'sdescr_ru'], 'safe'],
+            [['page', 'head_ua', 'head_ru', 'subhead_ua', 'subhead_ru', 'descr_ua', 'descr_ru'], 'safe'],
         ];
     }
 
@@ -62,12 +62,13 @@ class PagetextsSearch extends Pagetexts
             'id' => $this->id,
         ]);
 
-        $query->andFilterWhere(['like', 'head_ua', $this->head_ua])
+        $query->andFilterWhere(['like', 'page', $this->page])
+            ->andFilterWhere(['like', 'head_ua', $this->head_ua])
             ->andFilterWhere(['like', 'head_ru', $this->head_ru])
             ->andFilterWhere(['like', 'subhead_ua', $this->subhead_ua])
             ->andFilterWhere(['like', 'subhead_ru', $this->subhead_ru])
             ->andFilterWhere(['like', 'descr_ua', $this->descr_ua])
-            ->andFilterWhere(['like', 'sdescr_ru', $this->sdescr_ru]);
+            ->andFilterWhere(['like', 'descr_ru', $this->descr_ru]);
 
         return $dataProvider;
     }

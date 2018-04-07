@@ -51,4 +51,11 @@ class Phones extends \yii\db\ActiveRecord
             'number' => 'Number',
         ];
     }
+
+    public static function getPhones()
+    {
+        $sql = 'SELECT id, title_' . Yii::$app->language . ' AS title, phone, link FROM ' . self::tableName() . ' ORDER BY number ASC';
+        $data = Yii::$app->db->createCommand($sql)->queryAll();
+        return $data;
+    }
 }
