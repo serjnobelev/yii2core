@@ -17,13 +17,15 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'id') ?>
 
-    <?= $form->field($model, 'datetime') ?>
+    <?= $form->field($model, 'date') ?>
 
-    <?= $form->field($model, 'title_link') ?>
+    <?= $form->field($model, 'time') ?>
+
+    <?= $form->field($model, 'link') ?>
 
     <?= $form->field($model, 'title_ru') ?>
 
-    <?= $form->field($model, 'title_ua') ?>
+    <?php // echo $form->field($model, 'title_ua') ?>
 
     <?php // echo $form->field($model, 'text_ru') ?>
 

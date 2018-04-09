@@ -26,13 +26,19 @@ $this->params['breadcrumbs'][] = $this->title;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
-            'datetime',
-            'title_link',
+            'date',
+            'time',
             'title_ru',
-            'title_ua',
+            //'title_ua',
             //'text_ru:ntext',
             //'text_ua:ntext',
-            //'image',
+            [
+                'format' => 'html',
+                'label' => 'Image',
+                'value' => function($data){
+                    return Html::img($data->getImage(), ['width' => 200]);
+                }
+            ],
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

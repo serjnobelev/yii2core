@@ -8,6 +8,9 @@ use app\models\NewsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use dosamigos\transliterator\TransliteratorHelper;
+use yii\web\UploadedFile;
+use app\models\ImageUpload;
 
 /**
  * NewsController implements the CRUD actions for News model.
@@ -65,13 +68,25 @@ class NewsController extends Controller
     public function actionCreate()
     {
         $model = new News();
+        $image = new ImageUpload();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if(Yii::$app->request->isPost){
+            $this->setImage($model, $image);
+            if ($model->load(Yii::$app->request->post()) && $model->save()) {
+                $replace = ['!','±','@','#','$','%','^','&','*','(',')','_','+','=','<','>','?','/','|','\\','[',']'];
+                $cleanStr = str_replace($replace, '', $model->title_ru);
+                $translitStr = TransliteratorHelper::process($cleanStr, '', 'ru');
+                $lowerCase = mb_strtolower($translitStr, 'UTF-8');
+                $link = preg_replace("/\s/", '-', $lowerCase);
+                $model->link = $link . '-' . $model->id;
+                $model->save();
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
         }
 
         return $this->render('create', [
             'model' => $model,
+            'image' => $image,
         ]);
     }
 
@@ -85,13 +100,18 @@ class NewsController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        $image = new ImageUpload();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        if(Yii::$app->request->isPost) {
+            $this->setImage($model, $image);
+            if ($model->load(Yii::$app->request->post()) && $model->save()) {
+                return $this->redirect(['view', 'id' => $model->id]);
+            }
         }
 
         return $this->render('update', [
             'model' => $model,
+            'image' => $image,
         ]);
     }
 
@@ -123,5 +143,11 @@ class NewsController extends Controller
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
+    }
+
+    protected function setImage($model, $image)
+    {
+        $file = UploadedFile::getInstance($image, 'image');
+        if($file) $model->image = $image->uploadFile($file, $model->getImagePath());
     }
 }

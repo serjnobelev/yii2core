@@ -29,13 +29,20 @@ $this->params['breadcrumbs'][] = $this->title;
         'model' => $model,
         'attributes' => [
             'id',
-            'datetime',
-            'title_link',
+            'date',
+            'time',
+            'link',
             'title_ru',
             'title_ua',
-            'text_ru:ntext',
-            'text_ua:ntext',
-            'image',
+            'text_ru:html',
+            'text_ua:html',
+            [
+                'format' => 'html',
+                'label' => 'Image',
+                'value' => function($data){
+                    return Html::img($data->getImage(), ['width' => 200]);
+                }
+            ],
         ],
     ]) ?>
 
