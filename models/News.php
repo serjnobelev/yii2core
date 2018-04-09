@@ -8,8 +8,9 @@ use Yii;
  * This is the model class for table "news".
  *
  * @property int $id
- * @property string $datetime
- * @property string $title_link
+ * @property string $date
+ * @property string $time
+ * @property string $link
  * @property string $title_ru
  * @property string $title_ua
  * @property string $text_ru
@@ -32,10 +33,10 @@ class News extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['datetime', 'title_link', 'title_ru', 'title_ua', 'text_ru', 'text_ua', 'image'], 'required'],
-            [['datetime'], 'safe'],
+            [['date', 'time', 'title_ru', 'title_ua', 'text_ru', 'text_ua'], 'required'],
+            [['date', 'time'], 'safe'],
             [['text_ru', 'text_ua'], 'string'],
-            [['title_link', 'title_ru', 'title_ua'], 'string', 'max' => 256],
+            [['link', 'title_ru', 'title_ua'], 'string', 'max' => 256],
             [['image'], 'string', 'max' => 64],
         ];
     }
@@ -47,8 +48,9 @@ class News extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'datetime' => 'Datetime',
-            'title_link' => 'Title Link',
+            'date' => 'Date',
+            'time' => 'Time',
+            'link' => 'Link',
             'title_ru' => 'Title Ru',
             'title_ua' => 'Title Ua',
             'text_ru' => 'Text Ru',
@@ -59,22 +61,32 @@ class News extends \yii\db\ActiveRecord
 
     public static function getAllNews()
     {
-        $sql = 'SELECT datetime, title_link, title_' . Yii::$app->language . ' AS title, text_' . Yii::$app->language . ' AS text, image FROM ' . self::tableName() . ' ORDER BY datetime DESC';
+        $sql = 'SELECT date, time, link, title_' . Yii::$app->language . ' AS title, text_' . Yii::$app->language . ' AS text, image FROM ' . self::tableName() . ' ORDER BY date and time DESC';
         $data = Yii::$app->db->createCommand($sql)->queryAll();
         return $data;
     }
 
     public static function getOneNews($id)
     {
-        $sql = 'SELECT datetime, title_link, title_' . Yii::$app->language . ' AS title, text_' . Yii::$app->language . ' AS text, image FROM ' . self::tableName() . ' WHERE id=:id';
+        $sql = 'SELECT date, time, link, title_' . Yii::$app->language . ' AS title, text_' . Yii::$app->language . ' AS text, image FROM ' . self::tableName() . ' WHERE id=:id';
         $data = Yii::$app->db->createCommand($sql)->bindValue(':id', $id)->queryOne();
         return $data;
     }
 
     public static function getLast()
     {
-        $sql = 'SELECT datetime, title_link, title_' . Yii::$app->language . ' AS title FROM ' . self::tableName() . ' LIMIT 5';
+        $sql = 'SELECT date, time, link, title_' . Yii::$app->language . ' AS title FROM ' . self::tableName() . ' LIMIT 5';
         $data = Yii::$app->db->createCommand($sql)->queryAll();
         return $data;
+    }
+
+    public function getImage()
+    {
+        return ($this->image) ? DIRECTORY_SEPARATOR . $this->getImagePath() . $this->image : null;
+    }
+
+    public function getImagePath()
+    {
+        return Yii::$app->params['newsImgPath'];
     }
 }

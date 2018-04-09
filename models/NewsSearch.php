@@ -19,7 +19,7 @@ class NewsSearch extends News
     {
         return [
             [['id'], 'integer'],
-            [['datetime', 'title_link', 'title_ru', 'title_ua', 'text_ru', 'text_ua', 'image'], 'safe'],
+            [['date', 'time', 'link', 'title_ru', 'title_ua', 'text_ru', 'text_ua', 'image'], 'safe'],
         ];
     }
 
@@ -60,10 +60,11 @@ class NewsSearch extends News
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'datetime' => $this->datetime,
+            'date' => $this->date,
+            'time' => $this->time,
         ]);
 
-        $query->andFilterWhere(['like', 'title_link', $this->title_link])
+        $query->andFilterWhere(['like', 'link', $this->link])
             ->andFilterWhere(['like', 'title_ru', $this->title_ru])
             ->andFilterWhere(['like', 'title_ua', $this->title_ua])
             ->andFilterWhere(['like', 'text_ru', $this->text_ru])
