@@ -41,7 +41,7 @@
                         <svg class="icon-svg-date">
                             <use xlink:href="/img/sprite.svg#date" xmlns:xlink="http://www.w3.org/1999/xlink"></use>
                         </svg>
-                        <span><?= $news['datetime'] ?></span>
+                        <span><?= $news['date'] . ', ' . $news['time'] ?></span>
                     </div>
                     <div class="news_social">
                         <span class="label">Поделиться:</span>
@@ -82,8 +82,8 @@
                     <div class="news_section-widget_list ps_flag1 news_section-widget_list-1">
                         <?php foreach ($lastnews as $last): ?>
                         <div class="widget_list-item">
-                            <div class="widget_list-item_date"><?= $last['datetime'] ?></div>
-                            <a href="<?= $last['title_link'] ?>" class="widget_list-item_txt"><?= $last['title'] ?></a>
+                            <div class="widget_list-item_date"><?= $last['date'] ?></div>
+                            <a href="<?= (Yii::$app->language == 'ru') ? '/news/' . $last['link'] : '/ua/news/' . $last['link'] ?>" class="widget_list-item_txt"><?= $last['title'] ?></a>
                         </div>
                         <?php endforeach; ?>
                     </div>

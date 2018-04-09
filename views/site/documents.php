@@ -44,7 +44,7 @@
                     <div class="swiper-wrapper">
                         <?php foreach ($docs as $doc): ?>
                         <div class="swiper-slide">
-                            <img src="<?= Yii::$app->params['docsImgPath'] . $doc['image'] ?>" alt="swiper slide">
+                            <img src="<?= '/img/documents/' . $doc['image'] ?>" alt="swiper slide">
                             <div class="slide_text"></div>
                         </div>
                         <?php endforeach; ?>

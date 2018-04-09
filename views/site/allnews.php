@@ -43,12 +43,12 @@
             <div class="news_list-items">
                 <?php foreach ($news as $item): ?>
                 <div class="news_item">
-                    <a href="<?= (Yii::$app->language == 'ru') ? '/news/' . $item['title_link'] : '/ua/news/' . $item['title_link'] ?>" class="news_item-img"> <img src="/img/news/<?= $item['image'] ?>" alt="news img">
+                    <a href="<?= (Yii::$app->language == 'ru') ? '/news/' . $item['link'] : '/ua/news/' . $item['link'] ?>" class="news_item-img"> <img src="/img/news/<?= $item['image'] ?>" alt="news img">
                         <div class="img_subscr">Читать полностью…</div>
                     </a>
                     <div class="news_item-info">
-                        <div class="news_item-info_date"><?= $item['datetime'] ?></div>
-                        <a href="<?= (Yii::$app->language == 'ru') ? '/news/' . $item['title_link'] : '/ua/news/' . $item['title_link'] ?>" class="news_item-info_head"><?= $item['title'] ?></a>
+                        <div class="news_item-info_date"><?= $item['date'] . ', ' . $item['time'] ?></div>
+                        <a href="<?= (Yii::$app->language == 'ru') ? '/news/' . $item['link'] : '/ua/news/' . $item['link'] ?>" class="news_item-info_head"><?= $item['title'] ?></a>
                         <div class="news_item-info_txt"><?= $item['text'] ?></div>
                     </div>
                 </div>
