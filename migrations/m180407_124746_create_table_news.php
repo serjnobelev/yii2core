@@ -30,13 +30,14 @@ class m180407_124746_create_table_news extends Migration
     {
         $this->createTable('news', [
             'id' => $this->primaryKey(),
-            'datetime' => $this->dateTime()->notNull(),
-            'title_link' => $this->string(256)->notNull(),
+            'date' => $this->date()->notNull(),
+            'time' => $this->time()->notNull(),
+            'link' => $this->string(256)->notNull(),
             'title_ru' => $this->string(256)->notNull(),
             'title_ua' => $this->string(256)->notNull(),
             'text_ru' => $this->text()->notNull(),
             'text_ua' => $this->text()->notNull(),
-            'image' => $this->string(64)->notNull(),
+            'image' => $this->string(64),
         ]);
     }
 
