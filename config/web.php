@@ -2,6 +2,7 @@
 
 $params = require __DIR__ . '/params.php';
 $db = require __DIR__ . '/db.php';
+use kartik\datecontrol\Module;
 
 $config = [
     'id' => 'yiiBaseApp',
@@ -37,10 +38,13 @@ $config = [
             'class' => 'yii\i18n\Formatter',
             'datetimeFormat' => 'dd-MM-yyyy, HH:mm',
             'dateFormat' => 'dd-MM-yyyy',
+            'timeFormat' => 'HH:mm',
             'decimalSeparator' => ',',
             'thousandSeparator' => ' ',
             'currencyCode' => 'UAH',
+            'timeZone' => 'Europe/Kiev',
         ],
+
         /*
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
@@ -128,6 +132,22 @@ $config = [
     'modules' => [
         'admin' => [
             'class' => 'app\modules\admin\Module',
+        ],
+        'datecontrol' =>  [
+            'class' => 'kartik\datecontrol\Module',
+            'displaySettings' => [
+                Module::FORMAT_DATE => 'yyyy-M-dd',
+                Module::FORMAT_TIME => 'php: H:i',
+                Module::FORMAT_DATETIME => 'php: d-M-Y H:i',
+            ],
+            'saveSettings' => [
+                Module::FORMAT_DATE => 'yyyy-M-dd',
+                Module::FORMAT_TIME => 'H:i:s',
+                Module::FORMAT_DATETIME => 'yyyy-mm-dd H:i:s',
+            ],
+            'displayTimezone' => 'Europe/Kiev',
+            'saveTimezone' => 'Europe/Kiev',
+            'autoWidget' => true,
         ],
     ],
     'params' => $params,
