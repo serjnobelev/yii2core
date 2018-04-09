@@ -2,8 +2,6 @@
 
 namespace app\controllers;
 
-use app\components\Foo;
-use app\models\Category;
 use app\models\Conditions;
 use app\models\Contacts;
 use app\models\Documents;
@@ -12,12 +10,10 @@ use app\models\Pagetexts;
 use app\models\Phones;
 use app\models\Pluses;
 use app\models\Rates;
-use app\models\User;
+use kartik\datecontrol\DateControl;
 use Yii;
 use yii\filters\AccessControl;
-use yii\helpers\Html;
 use yii\helpers\StringHelper;
-use yii\validators\EmailValidator;
 use yii\web\Controller;
 use yii\web\HttpException;
 use yii\web\NotFoundHttpException;
@@ -26,8 +22,6 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\UserForm;
-use app\models\Article;
-use yii\helpers\Url;
 
 class SiteController extends Controller
 {
@@ -92,7 +86,7 @@ class SiteController extends Controller
 
     public function actionDownloadDoc($image)
     {
-        $obj = __DIR__ . '/../web' . Yii::$app->params['docsImgPath'] . $image;
+        $obj = Yii::$app->params['docsImgPath'] . $image;
         if(file_exists($obj)) {
             Yii::$app->response->sendFile($obj);
             Yii::$app->response->send();
@@ -149,10 +143,11 @@ class SiteController extends Controller
     {
         if($title == null){
             $news = News::getAllNews();
-            Yii::$app->formatter->locale = 'ru-RU';
+            Yii::$app->formatter->locale = 'ru';
             foreach ($news as $k => $v) {
-                $news[$k]['text'] = StringHelper::truncateWords($news[$k]['text'], 36, '…', true);
-                $news[$k]['datetime'] = Yii::$app->formatter->asDatetime($news[$k]['datetime']);
+                $news[$k]['text'] = StringHelper::truncateWords($news[$k]['text'], 37, '', true);
+                $news[$k]['date'] = Yii::$app->formatter->asDate($news[$k]['date']);
+                $news[$k]['time'] = Yii::$app->formatter->asTime($news[$k]['time']);
             }
             return $this->render('allnews', ['news' => $news]);
         } else {
@@ -160,12 +155,14 @@ class SiteController extends Controller
             $id = (int)array_pop($parts);
             if(is_numeric($id)){
                 $news = News::getOneNews($id);
-                if($news['title_link']){
+                if($news['link']){
                     $lastnews = News::getLast();
                     foreach ($lastnews as $k => $v) {
-                        $lastnews[$k]['datetime'] = Yii::$app->formatter->asDate($lastnews[$k]['datetime']);
+                        $lastnews[$k]['date'] = Yii::$app->formatter->asDate($lastnews[$k]['date']);
+                        $lastnews[$k]['time'] = Yii::$app->formatter->asTime($lastnews[$k]['time']);
                     }
-                    $news['datetime'] = Yii::$app->formatter->asDatetime($news['datetime']);
+                    $news['date'] = Yii::$app->formatter->asDate($news['date']);
+                    $news['time'] = Yii::$app->formatter->asTime($news['time']);
                     return $this->render('onenews', ['news' => $news, 'lastnews' => $lastnews]);
                 } else {
                     throw new \yii\web\HttpException(404);
